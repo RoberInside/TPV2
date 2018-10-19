@@ -1,4 +1,3 @@
-
 #include "SDL.h"
 #include "SDL_image.h"
 #include "checkML.h"
@@ -9,7 +8,7 @@ using namespace std;
 using uint = unsigned int;
 
 void firstTest() {
-	_CrtSetDbgFlag(_CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF); // Check Memory Leaks
+	//_CrtSetDbgFlag(_CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF); // Check Memory Leaks
 	SDL_Window* window = nullptr;
 	SDL_Renderer* renderer = nullptr;
 	const uint winWidth = 800;
