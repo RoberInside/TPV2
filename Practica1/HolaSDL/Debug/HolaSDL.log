@@ -1,1 +1,19 @@
-﻿
+﻿  Dog.cpp
+c:\users\gl552\desktop\programacion 2º\practicas\tpv2\practica1\holasdl\dog.cpp(20): warning C4018: '<': no coinciden signed/unsigned
+c:\users\gl552\desktop\programacion 2º\practicas\tpv2\practica1\holasdl\dog.cpp(29): warning C4018: '<': no coinciden signed/unsigned
+  Game.cpp
+c:\users\gl552\desktop\programacion 2º\practicas\tpv2\practica1\holasdl\game.cpp(19): warning C4244: 'argumento': conversión de 'double' a 'uint'; posible pérdida de datos
+  Helicopter.cpp
+c:\users\gl552\desktop\programacion 2º\practicas\tpv2\practica1\holasdl\helicopter.cpp(20): warning C4018: '<': no coinciden signed/unsigned
+c:\users\gl552\desktop\programacion 2º\practicas\tpv2\practica1\holasdl\helicopter.cpp(29): warning C4018: '<': no coinciden signed/unsigned
+  main.cpp
+c:\program files (x86)\windows kits\10\include\10.0.17134.0\ucrt\crtdbg.h(303): warning C4005: '_malloca': redefinición de macro
+  c:\program files (x86)\windows kits\10\include\10.0.17134.0\ucrt\malloc.h(122): note: vea la definición anterior de '_malloca'
+c:\users\gl552\desktop\programacion 2º\practicas\tpv2\practica1\holasdl\main.cpp(60): warning C4244: '=': conversión de 'double' a 'int'; posible pérdida de datos
+c:\users\gl552\desktop\programacion 2º\practicas\tpv2\practica1\holasdl\main.cpp(79): warning C4244: '=': conversión de 'double' a 'int'; posible pérdida de datos
+c:\users\gl552\desktop\programacion 2º\practicas\tpv2\practica1\holasdl\main.cpp(145): warning C4018: '<': no coinciden signed/unsigned
+c:\users\gl552\desktop\programacion 2º\practicas\tpv2\practica1\holasdl\main.cpp(151): warning C4018: '<': no coinciden signed/unsigned
+  Texture.cpp
+  Generando código...
+  LINK : no se encontró C:\Users\GL552\Desktop\Programacion 2º\practicas\TPV2\Practica1\bin\HolaSDLDebug.exe o no lo generó el último vínculo incremental; ejecutando vínculo completo
+  HolaSDL.vcxproj -> C:\Users\GL552\Desktop\Programacion 2º\practicas\TPV2\Practica1\bin\HolaSDLDebug.exe
