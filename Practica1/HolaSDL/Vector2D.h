@@ -20,7 +20,7 @@ public:
 	void rotate(double degrees);
 	double angle(const Vector2D& v) const;
 	void normalize();
-	Vector2D sumaVectores(Vector2D v1, Vector2D v2);		
+	Vector2D sumaVectores(Vector2D v1, Vector2D v2);
 	Vector2D restaVectores(Vector2D v1, Vector2D v2);
 	Vector2D vectorXescalar(double n);
 

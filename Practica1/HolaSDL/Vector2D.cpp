@@ -60,7 +60,7 @@ void Vector2D::rotate(double degrees) {
 		degrees = 360 + degrees;
 	}
 
-	
+
 
 	double angle = degrees * M_PI / 180;
 	double sine = sin(angle);
@@ -99,16 +99,16 @@ void Vector2D::normalize() {
 Vector2D Vector2D::vectorXescalar(double n)
 {
 	Vector2D w;
-	w.setX = x_ * n;
-	w.setY = y_ * n;
+	w.setX(x_* n);
+	w.setY(y_* n);
 	return w;
 }
 
 Vector2D Vector2D::sumaVectores(Vector2D v1, Vector2D v2)
 {
 	Vector2D u;
-	u.setX = v1.getX() + v2.getX();
-	u.setY = v1.getY() + v2.getY();
+	u.setX ( v1.getX() + v2.getX());
+	u.setY ( v1.getY() + v2.getY());
 
 	return u;
 }
@@ -116,9 +116,9 @@ Vector2D Vector2D::sumaVectores(Vector2D v1, Vector2D v2)
 Vector2D Vector2D::restaVectores(Vector2D v1, Vector2D v2)
 {
 	Vector2D u;
-	u.setX = v1.getX() - v2.getX();
-	u.setY = v1.getY() - v2.getY();
-
+	u.setX (v1.getX() - v2.getX());
+	u.setY ( v1.getY() - v2.getY());
+	 
 	return u;
 }
 
