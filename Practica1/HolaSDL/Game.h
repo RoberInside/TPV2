@@ -1,10 +1,13 @@
 #include "Dog.h"
 #include "Helicopter.h"
 #include "Texture.h"
+#include "Wall.h"
+#include "Paddle.h"
+#include "Ball.h"
 
 const uint WIN_WIDTH = 800;
 const uint WIN_HEIGHT = 600;
-const uint NUM_TEXTURES = 3;
+const uint NUM_TEXTURES = 6;
 #pragma once
 using namespace std;
 struct tamtex
@@ -20,10 +23,14 @@ private:
 	// uint winWidth, winHeight; // También podrían estar aquí
 	Dog* dog = nullptr;
 	Helicopter* helicopter = nullptr;
+	Wall* muro[3]{ nullptr,nullptr,nullptr};
+	Paddle* paddle = nullptr;
+	Ball* ball = nullptr;
 	bool exit = false;
 	Texture* textures[NUM_TEXTURES]{nullptr,nullptr,nullptr};
-	string nombretex[NUM_TEXTURES]{ "..\\images\\background1.png", "..\\images\\dog.png","..\\images\\helicopter2.png" };
-	tamtex tam[3];
+	string nombretex[NUM_TEXTURES]{ "..\\images\\background1.png", "..\\images\\side.png","..\\images\\topside.png",
+	"..\\images\\paddle.png" ,"..\\images\\ball.png","..\\images\\bricks.png" };
+	tamtex tam[NUM_TEXTURES];
 	SDL_Rect fond;
 public:
 	Game();

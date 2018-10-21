@@ -1,2 +1,3 @@
-﻿  Vector2D.cpp
+﻿  Game.cpp
+c:\users\gl552\desktop\programacion 2º\practicas\tpv2\practica1\holasdl\game.cpp(23): warning C4244: 'argumento': conversión de 'double' a 'uint'; posible pérdida de datos
   HolaSDL.vcxproj -> C:\Users\GL552\Desktop\Programacion 2º\practicas\TPV2\Practica1\bin\HolaSDLDebug.exe
