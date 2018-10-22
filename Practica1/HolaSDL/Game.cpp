@@ -1,5 +1,5 @@
 #include "Game.h"
-
+#include <fstream>
 
 
 Game::Game()
@@ -15,14 +15,14 @@ Game::Game()
 	for (uint i = 0; i < NUM_TEXTURES; i++) {
 		textures[i] = new Texture(renderer, nombretex[i], tam[i].row, tam[i].col);
 	} 
-	//dog = new Dog(100,100,0,5,textures[1]);
-	//helicopter = new Helicopter(100,100,7,0.5,textures[2]);
 	muro[0] = new Wall(25, WIN_HEIGHT,0,0,textures[1]);
 	muro[1] = new Wall(25, WIN_HEIGHT,WIN_WIDTH-25,0,textures[1]);
 	muro[2] = new Wall(WIN_WIDTH, 25,0,0,textures[2]);
 	paddle = new Paddle(100,25,3.5,20,textures[3]);
 	ball = new Ball(25,25,15,19,textures[4]);
-	
+
+	initMap("..//Data//Levels//level01.ark");
+
 	fond.x = fond.y = 0;
 	fond.w = WIN_WIDTH;
 	fond.h = WIN_HEIGHT;
@@ -65,6 +65,48 @@ void Game::render() const
 void Game::update()
 {
 	paddle->Update();	
+}
+
+void Game::initMap(string level)
+{
+	ifstream map;
+	map.open(level);
+	uint rows, cols;
+	if (!map.is_open()) cout << "No se enceuntra el fichero" << endl;
+	else {
+		map >> rows >> cols;
+		char buffer;
+		blocks = new BlocksMap(this, rows, cols);
+		for (int i = 0; i < rows; i++) 
+		{
+
+			for (int j = 0; j < cols; j++) 
+			{
+				map >> buffer;
+
+				if (buffer == '0') {
+					blocks->setAt(new Block(/*argumentos constructora*/))
+				}
+				else if (buffer == '1') {
+					
+				}
+				else if (buffer == '2') {
+					
+				}
+				else if (buffer == '3') {
+					
+
+				}
+				else if (buffer == '4') { 
+					
+				}
+				else if (buffer == '5') {
+					
+
+				}
+			}
+		}
+	}
 }
  
 void Game::handleEvents()
