@@ -1,3 +1,13 @@
 ﻿  Game.cpp
-c:\users\gl552\desktop\programacion 2º\practicas\tpv2\practica1\holasdl\game.cpp(23): warning C4244: 'argumento': conversión de 'double' a 'uint'; posible pérdida de datos
-  HolaSDL.vcxproj -> C:\Users\GL552\Desktop\Programacion 2º\practicas\TPV2\Practica1\bin\HolaSDLDebug.exe
+c:\users\robix\downloads\tpv2\practica1\holasdl\game.cpp(23): warning C4244: 'argumento': conversión de 'double' a 'uint'; posible pérdida de datos
+  main.cpp
+c:\program files (x86)\windows kits\10\include\10.0.17134.0\ucrt\crtdbg.h(303): warning C4005: '_malloca': redefinición de macro
+  c:\program files (x86)\windows kits\10\include\10.0.17134.0\ucrt\malloc.h(122): note: vea la definición anterior de '_malloca'
+c:\users\robix\downloads\tpv2\practica1\holasdl\main.cpp(94): warning C4018: '<': no coinciden signed/unsigned
+c:\users\robix\downloads\tpv2\practica1\holasdl\main.cpp(98): warning C4018: '<': no coinciden signed/unsigned
+c:\users\robix\downloads\tpv2\practica1\holasdl\main.cpp(22): warning C4101: 'textW': variable local sin referencia
+c:\users\robix\downloads\tpv2\practica1\holasdl\main.cpp(24): warning C4101: 'textFrameH': variable local sin referencia
+c:\users\robix\downloads\tpv2\practica1\holasdl\main.cpp(22): warning C4101: 'textH': variable local sin referencia
+c:\users\robix\downloads\tpv2\practica1\holasdl\main.cpp(23): warning C4101: 'textFrameW': variable local sin referencia
+  Generando código...
+  HolaSDL.vcxproj -> C:\Users\Robix\Downloads\TPV2\Practica1\bin\HolaSDLDebug.exe

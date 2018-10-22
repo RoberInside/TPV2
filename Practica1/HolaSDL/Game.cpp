@@ -52,8 +52,7 @@ void Game::render() const
 {
 	SDL_RenderClear(renderer);
 	textures[0]->render(fond);
-	//dog->Render();
-	//helicopter->Render();
+	
 	for (int i = 0; i < 3; i++)
 	{
 		muro[i]->Render();
@@ -65,9 +64,7 @@ void Game::render() const
 
 void Game::update()
 {
-	paddle->Update();
-	//dog->Update();
-	//helicopter->Update();
+	paddle->Update();	
 }
  
 void Game::handleEvents()
@@ -76,7 +73,5 @@ void Game::handleEvents()
 	while (SDL_PollEvent(&event) && !exit) {
 		if (event.type == SDL_QUIT) exit = true;
 		paddle->handleEvents(event);
-		//dog->handleEvents(event);
-		//helicopter->handleEvents(event);
 	}
 }

@@ -1,6 +1,8 @@
+#ifndef BALL_H_
+#define BALL_H_
 #include "Texture.h"
 #include "Vector2D.h"
-#pragma once
+
 class Ball
 {
 private:
@@ -13,14 +15,14 @@ private:
 	Vector2D vect;
 	SDL_Rect destRect;
 	int time = 0;
+
 public:
 	Ball();
-	Ball(uint w, uint h, uint x, uint y, Texture* t) :
-		w(w), h(h), x(x), y(y), texture(t) {
-		destRect.h = h; destRect.w = w; destRect.x = x * w; destRect.y = h * y; vect.setX(0); vect.setY(0);
-	}
+	Ball(uint w, uint h, uint x, uint y, Texture* t);
 	~Ball();
+
 	void Render() const;
 	void Update();
 };
+#endif // !BALL_H_
 

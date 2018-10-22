@@ -1,5 +1,3 @@
-#include "Dog.h"
-#include "Helicopter.h"
 #include "Texture.h"
 #include "Wall.h"
 #include "Paddle.h"
@@ -21,8 +19,6 @@ private:
 	SDL_Window* window = nullptr;
 	SDL_Renderer* renderer = nullptr;
 	// uint winWidth, winHeight; // También podrían estar aquí
-	Dog* dog = nullptr;
-	Helicopter* helicopter = nullptr;
 	Wall* muro[3]{ nullptr,nullptr,nullptr};
 	Paddle* paddle = nullptr;
 	Ball* ball = nullptr;
