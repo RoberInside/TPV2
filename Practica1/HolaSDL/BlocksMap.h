@@ -3,6 +3,7 @@
 #include "Texture.h"
 #include "Vector2D.h"
 #include "Block.h"
+<<<<<<< HEAD
 #include "Texture.h"
 #include <fstream>
 
@@ -29,4 +30,21 @@ public:
 #endif // !BLOCKSMAP_H_
 
 
+=======
+
+class Game;
+
+class BlocksMap  
+{
+private:
+	Block** blocks;
+	uint rows_, cols_;
+public:
+	BlocksMap(Game* game, uint rows, uint cols);
+	~BlocksMap();
+
+	void setAt(Block b,uint row, uint col);
+};
+#endif // !BLOCKSMAP_H_
+>>>>>>> f39fe4c3c83ad7b7473a7390b4678a87483577ac
 

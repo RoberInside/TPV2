@@ -1,7 +1,8 @@
+#ifndef WALL_H_
+#define WALL_H_
 #include "Texture.h"
 #include "Vector2D.h"
-#pragma once
-using uint = unsigned int;
+
 class Wall
 {
 private:
@@ -13,13 +14,13 @@ private:
 	SDL_Rect destRect;
 	Vector2D vect;
 	int cols = 0;
+
 public:
 	Wall();
-	Wall(uint w, uint h, uint x, uint y, Texture* t) :
-		w(w), h(h), x(x), y(y), texture(t) {
-		destRect.h = h; destRect.w = w; destRect.x = x;destRect.y = h * y; vect.setX(0); vect.setY (0);
-	}
+	Wall(uint w, uint h, uint x, uint y, Texture* t);
 	~Wall();
+
 	void Render() const;
 };
+#endif // !WALL_H_
 

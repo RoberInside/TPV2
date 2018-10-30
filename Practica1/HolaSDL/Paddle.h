@@ -1,6 +1,8 @@
+#ifndef PADDLE_H_
+#define PADDLE_H_
 #include "Texture.h"
 #include "Vector2D.h"
-#pragma once
+
 class Paddle
 {
 private:
@@ -13,15 +15,16 @@ private:
 	Vector2D vect;
 	SDL_Rect destRect;
 	int time = 0;
+
 public:
+
 	Paddle();
-	Paddle(uint w, uint h, uint x, uint y, Texture* t) :
-		w(w), h(h), x(x), y(y), texture(t) {
-		destRect.h = h; destRect.w = w; destRect.x = x * w; destRect.y = h * y; vect.setX(0); vect.setY(0);
-	}
+	Paddle(uint w, uint h, uint x, uint y, Texture* t);
 	~Paddle();
+
 	void Render() const;
 	void Update();
 	void  handleEvents(SDL_Event& event);
 };
+#endif // !PADDLE_H_
 
