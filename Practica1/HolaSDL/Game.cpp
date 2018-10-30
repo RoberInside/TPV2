@@ -21,11 +21,11 @@ Game::Game()
 	paddle = new Paddle(100,25,3.5,20,textures[3]);
 	ball = new Ball(25,25,15,19,textures[4]);
 
-	blockmap = new BlocksMap("level01.ark", textures[5], (WIN_HEIGHT / 2) - 25 , WIN_WIDTH - 50);
+	blockmap = new BlocksMap("..//Data//Levels//level01.ark", textures[5], (WIN_HEIGHT / 2) - 25 , WIN_WIDTH - 50);
 	
 
 
-	//initMap("..//Data//Levels//level01.ark");
+	
 
 
 	fond.x = fond.y = 0;
