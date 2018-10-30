@@ -20,7 +20,7 @@ void Paddle::Update()
 {
 	if (time < SDL_GetTicks())
 	{
-		time += 50;
+		time += 10;
 		destRect.x += velx * dirX;
 	}
 }
@@ -31,14 +31,14 @@ void Paddle::handleEvents(SDL_Event& event)
 	{
 		if (event.key.keysym.sym == SDLK_a)
 		{
-			velx = -10;
+			velx = -5;
 		}
 		else if (event.key.keysym.sym == SDLK_d)
 		{
-			velx = 10;
+			velx = 5;
 		}
 	}
-	else if (event.type == SDL_KEYUP)
+	else if (event.type == SDL_KEYUP )
 	{
 		if (event.key.keysym.sym == SDLK_a)
 		{

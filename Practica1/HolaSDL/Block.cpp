@@ -13,5 +13,5 @@ Block::~Block()
 
 void Block::Render() const
 {
-	texture->render(destRect);
+	texture->renderFrame(destRect, raw , col);
 }

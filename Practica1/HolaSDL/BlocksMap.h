@@ -1,11 +1,32 @@
+#ifndef BLOCKSMAP_H_
+#define BLOCKSMAP_H_
 #include "Texture.h"
 #include "Vector2D.h"
 #include "Block.h"
-#pragma once
+#include "Texture.h"
+#include <fstream>
+
+class Game;
+
+
 class BlocksMap
 {
+private:
+	Block*** blocks;
+	uint rows_, cols_, raw, cal;
+	Texture* texture;
+	Vector2D vect;
+	int numblock;
 public:
-	BlocksMap();
+	BlocksMap(string level, Texture* t,int row, int col);
 	~BlocksMap();
+
+	//void setAt(Block b, uint row, uint col);
+	int numBlocks() { return numblock; };
+	void initMap(string level);
+	void Render() const;
 };
+#endif // !BLOCKSMAP_H_
+
+
 

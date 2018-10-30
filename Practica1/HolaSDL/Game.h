@@ -4,6 +4,7 @@
 #include "Wall.h"
 #include "Paddle.h"
 #include "Ball.h"
+#include "BlocksMap.h"
 
 const uint WIN_WIDTH = 800;
 const uint WIN_HEIGHT = 600;
@@ -21,14 +22,16 @@ private:
 	SDL_Window* window = nullptr;
 	SDL_Renderer* renderer = nullptr;
 	// uint winWidth, winHeight; // También podrían estar aquí
-	Dog* dog = nullptr;
-	Helicopter* helicopter = nullptr;
+	//Dog* dog = nullptr;
+//	Helicopter* helicopter = nullptr;
 	Wall* muro[3]{ nullptr,nullptr,nullptr};
 	Paddle* paddle = nullptr;
 	Ball* ball = nullptr;
+	BlocksMap* blockmap = nullptr;
+	
 	bool exit = false;
 	Texture* textures[NUM_TEXTURES]{nullptr,nullptr,nullptr};
-	string nombretex[NUM_TEXTURES]{ "..\\images\\background1.png", "..\\images\\side.png","..\\images\\topside.png",
+	string nombretex[NUM_TEXTURES]{ "..\\images\\fondo.png", "..\\images\\side.png","..\\images\\topside.png",
 	"..\\images\\paddle.png" ,"..\\images\\ball.png","..\\images\\bricks.png" };
 	tamtex tam[NUM_TEXTURES];
 	SDL_Rect fond;

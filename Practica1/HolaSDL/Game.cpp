@@ -22,6 +22,7 @@ Game::Game()
 	muro[2] = new Wall(WIN_WIDTH, 25,0,0,textures[2]);
 	paddle = new Paddle(100,25,3.5,20,textures[3]);
 	ball = new Ball(25,25,15,19,textures[4]);
+	blockmap = new BlocksMap("level01.ark", textures[5], (WIN_HEIGHT / 2) - 25 , WIN_WIDTH - 50);
 	
 	fond.x = fond.y = 0;
 	fond.w = WIN_WIDTH;
@@ -34,6 +35,9 @@ Game::~Game()
 	for (uint i = 0; i < NUM_TEXTURES; i++) delete textures[i];
 	delete paddle;
 	for (uint i = 0; i < 3; i++)delete muro[i];
+	delete ball;
+	//blockmap->~BlocksMap();
+	//delete blockmap;
 	SDL_DestroyRenderer(renderer);
 	SDL_DestroyWindow(window);
 	SDL_Quit();
@@ -51,7 +55,7 @@ void Game::run()
 void Game::render() const
 {
 	SDL_RenderClear(renderer);
-	textures[0]->render(fond);
+	//textures[0]->render(fond);
 	//dog->Render();
 	//helicopter->Render();
 	for (int i = 0; i < 3; i++)
@@ -60,6 +64,7 @@ void Game::render() const
 	}
 	paddle->Render();
 	ball->Render();
+	blockmap->Render();
 	SDL_RenderPresent(renderer);
 }
 
