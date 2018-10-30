@@ -20,14 +20,14 @@ Game::Game()
 	muro[2] = new Wall(WIN_WIDTH, 25,0,0,textures[2]);
 	paddle = new Paddle(100,25,3.5,20,textures[3]);
 	ball = new Ball(25,25,15,19,textures[4]);
-<<<<<<< HEAD
+
 	blockmap = new BlocksMap("level01.ark", textures[5], (WIN_HEIGHT / 2) - 25 , WIN_WIDTH - 50);
 	
-=======
 
-	initMap("..//Data//Levels//level01.ark");
 
->>>>>>> f39fe4c3c83ad7b7473a7390b4678a87483577ac
+	//initMap("..//Data//Levels//level01.ark");
+
+
 	fond.x = fond.y = 0;
 	fond.w = WIN_WIDTH;
 	fond.h = WIN_HEIGHT;
@@ -59,14 +59,13 @@ void Game::run()
 void Game::render() const
 {
 	SDL_RenderClear(renderer);
-<<<<<<< HEAD
+
 	//textures[0]->render(fond);
 	//dog->Render();
 	//helicopter->Render();
-=======
-	textures[0]->render(fond);
+
+	//textures[0]->render(fond);
 	
->>>>>>> f39fe4c3c83ad7b7473a7390b4678a87483577ac
 	for (int i = 0; i < 3; i++)
 	{
 		muro[i]->Render();
@@ -82,7 +81,7 @@ void Game::update()
 	paddle->Update();	
 }
 
-void Game::initMap(string level)
+/*void Game::initMap(string level)
 {
 	ifstream map;
 	map.open(level);
@@ -100,7 +99,7 @@ void Game::initMap(string level)
 				map >> buffer;
 
 				if (buffer == '0') {
-					blocks->setAt(new Block(/*argumentos constructora*/))
+					blocks->setAt(new Block(argumentos constructora))
 				}
 				else if (buffer == '1') {
 					
@@ -122,7 +121,7 @@ void Game::initMap(string level)
 			}
 		}
 	}
-}
+}*/
  
 void Game::handleEvents()
 {

@@ -22,21 +22,14 @@ private:
 	SDL_Window* window = nullptr;
 	SDL_Renderer* renderer = nullptr;
 	// uint winWidth, winHeight; // También podrían estar aquí
-<<<<<<< HEAD
+
 	//Dog* dog = nullptr;
 //	Helicopter* helicopter = nullptr;
 	Wall* muro[3]{ nullptr,nullptr,nullptr};
 	Paddle* paddle = nullptr;
 	Ball* ball = nullptr;
 	BlocksMap* blockmap = nullptr;
-	
-=======
-	Wall* muro[3]{ nullptr,nullptr,nullptr};
-	Paddle* paddle = nullptr;
-	Ball* ball = nullptr;
-	BlocksMap* blocks = nullptr;
 
->>>>>>> f39fe4c3c83ad7b7473a7390b4678a87483577ac
 	bool exit = false;
 	Texture* textures[NUM_TEXTURES]{nullptr,nullptr,nullptr};
 	string nombretex[NUM_TEXTURES]{ "..\\images\\fondo.png", "..\\images\\side.png","..\\images\\topside.png",

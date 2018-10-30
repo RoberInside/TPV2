@@ -1,9 +1,8 @@
 #include "BlocksMap.h"
 #include "Game.h"
 
-<<<<<<< HEAD
 
-BlocksMap::BlocksMap(string level, Texture* t,int row, int col)
+BlocksMap::BlocksMap(string level, Texture* t, int row, int col)
 {
 	rows_ = row;
 	cols_ = col;
@@ -11,8 +10,8 @@ BlocksMap::BlocksMap(string level, Texture* t,int row, int col)
 	vect.setY(25);
 	texture = t;
 	initMap(level);
-=======
-BlocksMap::BlocksMap(Game* game, uint rows, uint cols)
+}
+/*BlocksMap::BlocksMap(Game* game, uint rows, uint cols)
 {
 	blocks = new Block*[rows];
 
@@ -20,8 +19,7 @@ BlocksMap::BlocksMap(Game* game, uint rows, uint cols)
 	{
 		blocks[i] = new Block[cols];
 	}
->>>>>>> f39fe4c3c83ad7b7473a7390b4678a87483577ac
-}
+}*/
 
 
 BlocksMap::~BlocksMap()
@@ -31,27 +29,14 @@ BlocksMap::~BlocksMap()
 		{
 			for (size_t j = 0; j < cols_; j++)
 			{
-<<<<<<< HEAD
-				delete[] blocks [i][j];
+				delete[] blocks[i][j];
 			}
-			
-		}
-	}
-	blocks = nullptr;
-=======
-				delete[] blocks[i];
-			}
-			delete blocks[i];
+			delete[] blocks[i];
 		}
 	}
 	blocks = nullptr;
 }
 
-void BlocksMap::setAt(Block b, uint row, uint col)
-{
-	blocks[row][col] = b;
->>>>>>> f39fe4c3c83ad7b7473a7390b4678a87483577ac
-}
 
 /*void BlocksMap::setAt(Block b, uint row, uint col)
 {
