@@ -24,6 +24,8 @@ public:
 	int numBlocks() { return numblock; };
 	void initMap(string level);
 	void Render() const;
+	Block* collides(const SDL_Rect& ballRect, const Vector2D& ballVel, Vector2D& collVector);
+	Block* blockAt(const Vector2D& p);
 };
 #endif // !BLOCKSMAP_H_
 

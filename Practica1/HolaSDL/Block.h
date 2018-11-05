@@ -19,17 +19,16 @@ private:
 	int cols = 0;
 
 public:
-	Block();
-
-	Block(uint w, uint h, uint x, uint y, Texture* t,uint raw, uint col) :
-		w(w), h(h), x(x), y(y), texture(t), raw(raw), col(col) {
-		destRect.h = h; destRect.w = w; destRect.x = x; destRect.y = y; vect.setX(0); vect.setY(0);
-	}
-
-	//Block(uint w, uint h, uint x, uint y, Texture* t, uint row, uint col);
+	Block(uint w, uint h, uint x, uint y, Texture* t, uint row, uint col);
+	Block(uint w, uint h, const Vector2D &pos, Texture* t, uint row, uint col);
 	~Block();
 
 	void Render() const;
+
+	inline uint getH() { return h; }
+	inline uint getW() { return w; }
+	inline uint getX() { return x; }
+	inline uint getY() { return y; }
 };
 #endif // !BLOCK_H_
 

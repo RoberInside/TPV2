@@ -19,14 +19,10 @@ Game::Game()
 	muro[1] = new Wall(25, WIN_HEIGHT,WIN_WIDTH-25,0,textures[1]);
 	muro[2] = new Wall(WIN_WIDTH, 25,0,0,textures[2]);
 	paddle = new Paddle(100,25,3.5,20,textures[3]);
-	ball = new Ball(25,25,15,19,textures[4]);
+	ball = new Ball(this,25,25,15,19,textures[4], 1, 1);
 
 	blockmap = new BlocksMap("..//Data//Levels//level01.ark", textures[5], (WIN_HEIGHT / 2) - 25 , WIN_WIDTH - 50);
 	
-
-
-	
-
 
 	fond.x = fond.y = 0;
 	fond.w = WIN_WIDTH;
@@ -71,7 +67,7 @@ void Game::render() const
 		muro[i]->Render();
 	}
 	paddle->Render();
-	ball->Render();
+	ball->render();
 	blockmap->Render();
 	SDL_RenderPresent(renderer);
 }
@@ -79,6 +75,8 @@ void Game::render() const
 void Game::update()
 {
 	paddle->Update();	
+	ball->update();
+	
 }
 
 /*void Game::initMap(string level)
