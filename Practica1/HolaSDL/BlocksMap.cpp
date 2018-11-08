@@ -28,13 +28,15 @@ BlocksMap::~BlocksMap()
 			{
 				if (blocks[i][j] != nullptr)
 				{
-					delete[] blocks[i][j];
+					delete blocks[i][j];
 					blocks[i][j] = nullptr;
 				}
 			}
 			delete[] blocks[i];
 			blocks[i] = nullptr;
 		}
+		delete [] blocks;
+		blocks = nullptr;
 	}
 	blocks = nullptr;
 	game = nullptr;

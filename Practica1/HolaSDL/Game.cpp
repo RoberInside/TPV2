@@ -30,11 +30,20 @@ Game::Game()
 
 Game::~Game()
 {
-	for (uint i = 0; i < NUM_TEXTURES; i++) delete textures[i];
-	delete paddle;
-	for (uint i = 0; i < 3; i++)delete muro[i];
-	delete ball;
 	delete blockmap;
+	blockmap = nullptr;
+	delete paddle;
+	paddle = nullptr;
+	for (int i = 0; i < 3; i++) {
+		delete muro[i];
+		muro[i] = nullptr;
+	}
+	delete ball;
+	ball = nullptr;
+	for (uint i = 0; i < NUM_TEXTURES; i++) {
+		delete textures[i];
+		textures[i] = nullptr;
+	}
 	SDL_DestroyRenderer(renderer);
 	SDL_DestroyWindow(window);
 	SDL_Quit();
@@ -42,7 +51,7 @@ Game::~Game()
 
 void Game::run()
 {
-	while (!exit) { // Falta el control de tiempo
+	while (!exit) { 
 		handleEvents();
 		update();
 		render();
@@ -52,12 +61,12 @@ void Game::run()
 void Game::update()
 {
 	uint startTime = SDL_GetTicks();
-	uint frameTime = SDL_GetTicks() - startTime; // Tiempo de la iteración
+	uint frameTime = SDL_GetTicks() - startTime;
 	if (frameTime < FRAME_RATE)
 		SDL_Delay(FRAME_RATE - frameTime);
 	paddle->Update();
 	ball->update();
-	//end = (!ball->() || blockMaps->numblock() == 0);
+	exit = (!ball->inGame() || blockmap->numBlocks() == 0);
 	end = blockmap->numBlocks() == 0;
 }
 

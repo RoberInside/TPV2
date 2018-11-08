@@ -32,11 +32,9 @@ private:
 	Paddle* paddle = nullptr;
 	Ball* ball = nullptr;
 	BlocksMap* blockmap = nullptr;
-
+	bool end = false;
 	bool exit = false;
 	Texture* textures[NUM_TEXTURES]{nullptr,nullptr,nullptr,nullptr,nullptr,nullptr };
-	string nombretex[NUM_TEXTURES]{ "..\\images\\fondo.png", "..\\images\\side.png","..\\images\\topside.png",
-	"..\\images\\paddle.png" ,"..\\images\\ball.png","..\\images\\bricks.png" };
 	struct texture_type
 	{
 		string nombre;
@@ -46,7 +44,6 @@ private:
 	 "..\\images\\paddle.png",1,1,"..\\images\\ball.png",1,1,"..\\images\\bricks.png",3,2};
 
 	SDL_Rect fond;
-	bool end = false;
 public:
 	Game();
 	~Game();

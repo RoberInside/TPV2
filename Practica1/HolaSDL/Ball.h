@@ -29,6 +29,7 @@ public:
 	void setVel(double x, double y) { vel = { x,y }; }
 	void colisionmuros();
 	void collisionpadle(Vector2D posPadle);
+	bool inGame();
 	void calculateVelDir(Vector2D posPadle);
 	void handleEvents(SDL_Event& event);
 	

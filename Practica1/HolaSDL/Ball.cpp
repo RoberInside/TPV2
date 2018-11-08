@@ -55,7 +55,7 @@ void Ball::handleEvents(SDL_Event& event)
 			}
 			while (vely==0)
 			{
-				vely = rand() % 2;
+				vely = rand() % 4;
 				vely = -vely;
 				vel.setY(vely);
 			}
@@ -83,7 +83,9 @@ void Ball::collisionpadle(Vector2D posPadle)
 		calculateVelDir(posPadle);
 	}
 }
-
+bool Ball::inGame() {
+	return (vect.getY() < 600);
+}
 void Ball::calculateVelDir(Vector2D posPadle) 
 {
 	Vector2D centroBall = Vector2D(vect.getX() + 15, vect.getY() + 15);
