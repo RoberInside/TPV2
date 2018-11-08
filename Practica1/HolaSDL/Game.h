@@ -19,11 +19,7 @@ const uint pos_h_pala = ((WIN_WIDTH / 2) - (AnchoPala / 2));
 const uint pos_w_pala = (WIN_HEIGHT - 60);
 
 using namespace std;
-struct tamtex
-{
-	uint row;
-	uint col;
-};
+
 class Game
 {
 private:
@@ -37,10 +33,17 @@ private:
 	BlocksMap* blockmap = nullptr;
 
 	bool exit = false;
-	Texture* textures[NUM_TEXTURES]{nullptr,nullptr,nullptr};
+	Texture* textures[NUM_TEXTURES]{nullptr,nullptr,nullptr,nullptr,nullptr,nullptr };
 	string nombretex[NUM_TEXTURES]{ "..\\images\\fondo.png", "..\\images\\side.png","..\\images\\topside.png",
 	"..\\images\\paddle.png" ,"..\\images\\ball.png","..\\images\\bricks.png" };
-	tamtex tam[NUM_TEXTURES];
+	struct texture_type
+	{
+		string nombre;
+		uint col, row;
+	};
+	texture_type alltex[NUM_TEXTURES] = { "..\\images\\fondo.png",1,1,"..\\images\\side.png",1,1,"..\\images\\topside.png",1,1,
+	 "..\\images\\paddle.png",1,1,"..\\images\\ball.png",1,1,"..\\images\\bricks.png",3,2};
+
 	SDL_Rect fond;
 	bool end = false;
 public:

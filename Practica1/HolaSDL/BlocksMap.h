@@ -12,19 +12,21 @@ class BlocksMap
 {
 private:
 	Block*** blocks;
-	uint rows_, cols_, raw, cal;
+	uint row, col;
 	Texture* texture;
-	Vector2D vect;
+	//Vector2D vect;
 	int numblock;
+	uint w = 0, h = 0;
+	Game* game;
 public:
-	BlocksMap(string level, Texture* t,int row, int col);
+	BlocksMap(string level, Texture* t, Game* g,uint w, uint h);
 	~BlocksMap();
 
 	//void setAt(Block b, uint row, uint col);
 	int numBlocks() { return numblock; };
 	void initMap(string level);
 	void Render() const;
-	void DelBlock(Block* block);
+	void DeleteBlock(Block* block);
 	Block* collides(const SDL_Rect& ballRect, const Vector2D& ballVel, Vector2D& collVector);
 	Block* blockAt(const Vector2D& p);
 };

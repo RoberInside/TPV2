@@ -1,7 +1,13 @@
-﻿  Ball.cpp
-c:\users\gl552\desktop\programacion 2º\practicas\tpv2\practica1\holasdl\ball.cpp(4): warning C4244: '=': conversión de 'double' a 'int'; posible pérdida de datos
-c:\users\gl552\desktop\programacion 2º\practicas\tpv2\practica1\holasdl\ball.cpp(5): warning C4244: '=': conversión de 'double' a 'int'; posible pérdida de datos
-c:\users\gl552\desktop\programacion 2º\practicas\tpv2\practica1\holasdl\ball.cpp(36): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
-c:\users\gl552\desktop\programacion 2º\practicas\tpv2\practica1\holasdl\ball.cpp(43): warning C4244: '+=': conversión de 'double' a 'int'; posible pérdida de datos
-c:\users\gl552\desktop\programacion 2º\practicas\tpv2\practica1\holasdl\ball.cpp(44): warning C4244: '+=': conversión de 'double' a 'int'; posible pérdida de datos
+﻿  BlocksMap.cpp
+c:\users\gl552\desktop\programacion 2º\practicas\tpv2\practica1\holasdl\block.h(30): warning C4244: 'return': conversión de 'double' a 'uint'; posible pérdida de datos
+c:\users\gl552\desktop\programacion 2º\practicas\tpv2\practica1\holasdl\block.h(31): warning C4244: 'return': conversión de 'double' a 'uint'; posible pérdida de datos
+c:\users\gl552\desktop\programacion 2º\practicas\tpv2\practica1\holasdl\blocksmap.cpp(61): warning C4018: '<': no coinciden signed/unsigned
+c:\users\gl552\desktop\programacion 2º\practicas\tpv2\practica1\holasdl\blocksmap.cpp(65): warning C4018: '<': no coinciden signed/unsigned
+c:\users\gl552\desktop\programacion 2º\practicas\tpv2\practica1\holasdl\blocksmap.cpp(67): warning C4018: '<': no coinciden signed/unsigned
+c:\users\gl552\desktop\programacion 2º\practicas\tpv2\practica1\holasdl\blocksmap.cpp(73): warning C4018: '<': no coinciden signed/unsigned
+c:\users\gl552\desktop\programacion 2º\practicas\tpv2\practica1\holasdl\blocksmap.cpp(76): warning C4018: '<': no coinciden signed/unsigned
+c:\users\gl552\desktop\programacion 2º\practicas\tpv2\practica1\holasdl\blocksmap.cpp(97): warning C4018: '<': no coinciden signed/unsigned
+c:\users\gl552\desktop\programacion 2º\practicas\tpv2\practica1\holasdl\blocksmap.cpp(100): warning C4018: '<': no coinciden signed/unsigned
+c:\users\gl552\desktop\programacion 2º\practicas\tpv2\practica1\holasdl\blocksmap.cpp(173): warning C4244: 'inicializando': conversión de 'double' a 'uint'; posible pérdida de datos
+c:\users\gl552\desktop\programacion 2º\practicas\tpv2\practica1\holasdl\blocksmap.cpp(174): warning C4244: 'inicializando': conversión de 'double' a 'uint'; posible pérdida de datos
   HolaSDL.vcxproj -> C:\Users\GL552\Desktop\Programacion 2º\practicas\TPV2\Practica1\bin\HolaSDLDebug.exe

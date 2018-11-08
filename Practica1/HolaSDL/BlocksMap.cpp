@@ -2,12 +2,9 @@
 #include "Game.h"
 
 
-BlocksMap::BlocksMap(string level, Texture* t, int row, int col)
+BlocksMap::BlocksMap(string level, Texture* t, Game* g, uint w, uint h):w(w),h(h)
 {
-	rows_ = row;
-	cols_ = col;
-	vect.setX(25);
-	vect.setY(25);
+	game = g;
 	texture = t;
 	initMap(level);
 }
@@ -25,16 +22,22 @@ BlocksMap::BlocksMap(string level, Texture* t, int row, int col)
 BlocksMap::~BlocksMap()
 {
 	if (blocks != nullptr) {
-		for (size_t i = 0; i < rows_; i++)
+		for (size_t i = 0; i < row; i++)
 		{
-			for (size_t j = 0; j < cols_; j++)
+			for (size_t j = 0; j < col; j++)
 			{
-				delete[] blocks[i][j];
+				if (blocks[i][j] != nullptr)
+				{
+					delete[] blocks[i][j];
+					blocks[i][j] = nullptr;
+				}
 			}
 			delete[] blocks[i];
+			blocks[i] = nullptr;
 		}
 	}
 	blocks = nullptr;
+	game = nullptr;
 }
 
 
@@ -46,76 +49,44 @@ void BlocksMap::initMap(string level)
 {
 	ifstream map;
 	map.open(level);
-	uint rows=0, cols=0;
+	//uint rows=0, cols=0;
 	if (!map.is_open()) cout << "No se enceuntra el fichero" << endl;
 	else {
-		map >> rows >> cols;
+		map >> row >> col;
 		char buffer;
-		rows_ = rows_ / rows;
-		cols_ = cols_ / cols;
-		raw = rows;
-		cal = cols;
-		int w = cols_, h = rows_;
+		int w , h;
+		w = ((800 - (20 * 2)) / col); h = ((600 - 200) / row);
 		//blocks = new BlocksMap(this, rows, cols);
-		blocks = new Block**[rows];
-		for (int i = 0; i < rows; i++) //por cada fila de la matriz se hace una columna
+		blocks = new Block**[row];
+		for (int i = 0; i < row; i++) //por cada fila de la matriz se hace una columna
 		{
-			blocks[i] = new Block*[cols];
+			blocks[i] = new Block*[col];
 		}
-		for (int i = 0; i < rows; i++)
+		for (int i = 0; i < row; i++)
 		{
-			for (int j = 0; j < cols; j++)
+			for (int j = 0; j < col; j++)
 			{
 				blocks[i][j] = nullptr;
 			}
 		}
 
-		for (int i = 0; i < rows; i++)
+		for (int i = 0; i < row; i++)
 		{
 
-			for (int j = 0; j < cols; j++)
+			for (int j = 0; j < col; j++)
 			{
 				map >> buffer;
 
 				if (buffer == '0') {
 					blocks[i][j] = nullptr;
-					int x = vect.getX() + cols_;
-					vect.setX(x);
 				}
-				else if (buffer == '1') {
-					blocks[i][j] = new Block(w, h, vect.getX(), vect.getY(), texture, 0, 0);
-					//blocks[i,j] = new Block(w,h,vect.getX(),vect.getY(),texture,0,0);
-					int x = vect.getX() + cols_;
-					vect.setX(x);
-				}
-				else if (buffer == '2') {
-					blocks[i][j] = new Block(w, h, vect.getX(), vect.getY(), texture, 0, 1);
-					int x = vect.getX() + cols_;
-					vect.setX(x);
-				}
-				else if (buffer == '3') {
-					blocks[i][j] = new Block(w, h, vect.getX(), vect.getY(), texture, 0, 2);
-					int x = vect.getX() + cols_;
-					vect.setX(x);
-				}
-				else if (buffer == '4') {
-					blocks[i] [j] = new Block(w, h, vect.getX(), vect.getY(), texture, 1, 0);
-					int x = vect.getX() + cols_;
-					vect.setX(x);
-				}
-				else if (buffer == '5') {
-					blocks[i] [j] = new Block(w, h, vect.getX(), vect.getY(), texture, 1, 1);
-					int x = vect.getX() + cols_;
-					vect.setX(x);
-				}
-				else if (buffer == '6') {
-					blocks[i][j] = new Block(w, h, vect.getX(), vect.getY(), texture, 1, 2);
-					int x = vect.getX() + cols_;
-					vect.setX(x);
+
+				else
+				{
+					blocks[i][j] = new Block(w,h,j,i,buffer-1,texture);
+					numblock++;
 				}
 			}
-			vect.setY((vect.getY() + rows_));
-			vect.setX(25);
 		}
 	}
 	map.close();
@@ -123,10 +94,10 @@ void BlocksMap::initMap(string level)
 
 void BlocksMap::Render() const
 {
-	for (int i = 0; i < raw; i++)
+	for (int i = 0; i < row; i++)
 	{
 
-		for (int j = 0; j < cal; j++)
+		for (int j = 0; j < col; j++)
 		{
 			if (blocks[i][j] != nullptr)
 			{
@@ -145,7 +116,7 @@ Block * BlocksMap::collides(const SDL_Rect& ballRect, const Vector2D& ballVel, V
 	Block* b = nullptr;
 	if (ballVel.getX() < 0 && ballVel.getY() < 0) {
 		if ((b = blockAt(p0))) {
-			if ((b->getY() + b->getH() - p0.getY()) <= (b->getX() + b->getW() - p0.getX()))
+			if ((b->getRow() + b->getH() - p0.getY()) <= (b->getCol() + b->getW() - p0.getX()))
 				collVector = { 0,1 }; // Borde inferior mas cerca de p0
 			else
 				collVector = { 1,0 }; // Borde dcho mas cerca de p0
@@ -158,7 +129,7 @@ Block * BlocksMap::collides(const SDL_Rect& ballRect, const Vector2D& ballVel, V
 	}
 	else if (ballVel.getX() >= 0 && ballVel.getY() < 0) {
 		if ((b = blockAt(p1))) {
-			if (((b->getY() + b->getH() - p1.getY()) <= (p1.getX() - b->getX())) || ballVel.getX() == 0)
+			if (((b->getRow() + b->getH() - p1.getY()) <= (p1.getX() - b->getCol())) || ballVel.getX() == 0)
 				collVector = { 0,1 }; // Borde inferior mas cerca de p1
 			else
 				collVector = { -1,0 }; // Borde izqdo mas cerca de p1
@@ -170,7 +141,7 @@ Block * BlocksMap::collides(const SDL_Rect& ballRect, const Vector2D& ballVel, V
 	}
 	else if (ballVel.getX() > 0 && ballVel.getY() > 0) {
 		if ((b = blockAt(p3))) {
-			if (((p3.getY() - b->getY()) <= (p3.getX() - b->getX()))) // || ballVel.getX() == 0)
+			if (((p3.getY() - b->getRow()) <= (p3.getX() - b->getCol()))) // || ballVel.getX() == 0)
 				collVector = { 0,-1 }; // Borde superior mas cerca de p3
 			else
 				collVector = { -1,0 }; // Borde dcho mas cerca de p3
@@ -182,7 +153,7 @@ Block * BlocksMap::collides(const SDL_Rect& ballRect, const Vector2D& ballVel, V
 	}
 	else if (ballVel.getX() < 0 && ballVel.getY() > 0) {
 		if ((b = blockAt(p2))) {
-			if (((p2.getY() - b->getY()) <= (b->getX() + b->getW() - p2.getX()))) // || ballVel.getX() == 0)
+			if (((p2.getY() - b->getRow()) <= (b->getCol() + b->getW() - p2.getX()))) // || ballVel.getX() == 0)
 				collVector = { 0,-1 }; // Borde superior mas cerca de p2
 			else
 				collVector = { 1,0 }; // Borde dcho mas cerca de p0
@@ -199,12 +170,15 @@ Block * BlocksMap::collides(const SDL_Rect& ballRect, const Vector2D& ballVel, V
 
 Block * BlocksMap::blockAt(const Vector2D & p)
 {
-	Block * b = nullptr;
-	if(b->getX() == p.getX() && b->getY() == p.getY())
-		return b;
+	uint y = (p.getY() - 20) / h;
+	uint x = (p.getX() - 20) / w;
+	if ((x < col && x >= 0) && (y < row && y >= 0) && blocks[y][x] != nullptr) {
+		return blocks[y][x];
+	}
+	else { return nullptr; }
 }
-void BlocksMap::DelBlock(Block* block) {
-	int fila_aux = block->(); int col_aux = block->();  
+void BlocksMap::DeleteBlock(Block* block) {
+	int fila_aux = block->getRow(); int col_aux = block->getCol();  
 	delete blocks[fila_aux][col_aux];
 	blocks[fila_aux][col_aux] = nullptr;
 	numblock--;

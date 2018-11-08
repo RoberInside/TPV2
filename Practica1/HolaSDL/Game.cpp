@@ -10,10 +10,8 @@ Game::Game()
 	renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED);
 	if (window == nullptr || renderer == nullptr)  throw "Error loading the SDL window or renderer";
 	// We now create the textures
-	tam[0].row = 1; tam[1].row = 1; tam[2].row = 1;	tam[3].row = 1; tam[4].row = 1; tam[5].row = 2;
-	tam[0].col = 1; tam[1].col = 1; tam[2].col = 1; tam[3].col = 1; tam[4].col = 1; tam[5].col = 3;
 	for (uint i = 0; i < NUM_TEXTURES; i++) {
-		textures[i] = new Texture(renderer, nombretex[i], tam[i].row, tam[i].col);
+		textures[i] = new Texture(renderer, alltex[i].nombre, alltex[i].row, alltex[i].col);
 	} 
 	muro[0] = new Wall(25, WIN_HEIGHT,0,0,textures[1]);
 	muro[1] = new Wall(25, WIN_HEIGHT,WIN_WIDTH-25,0,textures[1]);
@@ -21,7 +19,7 @@ Game::Game()
 	paddle = new Paddle(100,25,3.5,20,textures[3]);
 	ball = new Ball(this,25,25,15,19,textures[4]);
 
-	blockmap = new BlocksMap("..//Data//Levels//level01.ark", textures[5], (WIN_HEIGHT / 2) - 25 , WIN_WIDTH - 50);
+	blockmap = new BlocksMap("..//Data//Levels//level01.ark", textures[5],this , 0,0);
 	
 
 	fond.x = fond.y = 0;
@@ -86,7 +84,7 @@ bool Game::Collides(const SDL_Rect rect, const Vector2D& vel, Vector2D& collVect
 	block = blockmap->collides(rect, vel, collVector); 
 	if (block != nullptr) {
 		hit = true;
-		blockmap->DelBlock(block); 
+		blockmap->DeleteBlock(block); 
 		if (blockmap->numBlocks() == 0) { end = true; }
 	}
 	ball->colisionmuros();

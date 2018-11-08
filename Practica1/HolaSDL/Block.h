@@ -12,23 +12,23 @@ private:
 	int dirX = 0; int dirY = 0; // Dirección de movimiento
 	uint color;
 	int raw; int col;
-
+	Vector2D posBlocks = Vector2D(0, 0);
 	Texture* texture = nullptr;
 	SDL_Rect destRect;
 	Vector2D vect;
 	int cols = 0;
 
 public:
-	Block(uint w, uint h, uint x, uint y, Texture* t, uint row, uint col);
-	Block(uint w, uint h, const Vector2D &pos, Texture* t, uint row, uint col);
+	Block(uint w, uint h, uint x, uint y,int c, Texture* t);
+	//Block(uint w, uint h, const Vector2D &pos, Texture* t, uint row, uint col);
 	~Block();
 
 	void Render() const;
 
 	inline uint getH() { return h; }
 	inline uint getW() { return w; }
-	inline uint getX() { return x; }
-	inline uint getY() { return y; }
+	inline uint getCol() { return posBlocks.getX(); }
+	inline uint getRow() { return posBlocks.getY(); }
 };
 #endif // !BLOCK_H_
 
