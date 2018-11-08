@@ -9,10 +9,11 @@ private:
 	uint w = 0; // width
 	uint h = 0; // height
 	uint x = 0; uint y = 0; // Posición de esquina superior izqda
-	int dirX = 1; int dirY = 0;// Dirección de movimiento
-	int velx = 0; int vely = 0;
+	//int dirX = 1; int dirY = 0;// Dirección de movimiento
+	//int velx = 0; int vely = 0;
 	Texture* texture = nullptr;
-	Vector2D vect;
+	Vector2D vect,dir;
+	uint vel = 15;
 	SDL_Rect destRect;
 	int time = 0;
 
@@ -24,6 +25,7 @@ public:
 
 	void Render() const;
 	void Update();
+	Vector2D returnPos() { return vect; }
 	void  handleEvents(SDL_Event& event);
 };
 #endif // !PADDLE_H_

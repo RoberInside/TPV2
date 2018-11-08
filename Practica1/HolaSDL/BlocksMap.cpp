@@ -64,12 +64,12 @@ void BlocksMap::initMap(string level)
 		}
 		for (int i = 0; i < rows; i++)
 		{
-
 			for (int j = 0; j < cols; j++)
 			{
 				blocks[i][j] = nullptr;
 			}
 		}
+
 		for (int i = 0; i < rows; i++)
 		{
 
@@ -202,4 +202,10 @@ Block * BlocksMap::blockAt(const Vector2D & p)
 	Block * b = nullptr;
 	if(b->getX() == p.getX() && b->getY() == p.getY())
 		return b;
+}
+void BlocksMap::DelBlock(Block* block) {
+	int fila_aux = block->(); int col_aux = block->();  
+	delete blocks[fila_aux][col_aux];
+	blocks[fila_aux][col_aux] = nullptr;
+	numblock--;
 }

@@ -1,39 +1,7 @@
 ﻿  Ball.cpp
-c:\users\robix\archivos admin\universidad\4ºa\tpv2\practica1\holasdl\ball.cpp(4): warning C4244: '=': conversión de 'double' a 'int'; posible pérdida de datos
-c:\users\robix\archivos admin\universidad\4ºa\tpv2\practica1\holasdl\ball.cpp(5): warning C4244: '=': conversión de 'double' a 'int'; posible pérdida de datos
-  Block.cpp
-  BlocksMap.cpp
-c:\users\robix\archivos admin\universidad\4ºa\tpv2\practica1\holasdl\blocksmap.cpp(61): warning C4018: '<': no coinciden signed/unsigned
-c:\users\robix\archivos admin\universidad\4ºa\tpv2\practica1\holasdl\blocksmap.cpp(65): warning C4018: '<': no coinciden signed/unsigned
-c:\users\robix\archivos admin\universidad\4ºa\tpv2\practica1\holasdl\blocksmap.cpp(68): warning C4018: '<': no coinciden signed/unsigned
-c:\users\robix\archivos admin\universidad\4ºa\tpv2\practica1\holasdl\blocksmap.cpp(73): warning C4018: '<': no coinciden signed/unsigned
-c:\users\robix\archivos admin\universidad\4ºa\tpv2\practica1\holasdl\blocksmap.cpp(76): warning C4018: '<': no coinciden signed/unsigned
-c:\users\robix\archivos admin\universidad\4ºa\tpv2\practica1\holasdl\blocksmap.cpp(82): warning C4244: 'inicializando': conversión de 'double' a 'int'; posible pérdida de datos
-c:\users\robix\archivos admin\universidad\4ºa\tpv2\practica1\holasdl\blocksmap.cpp(86): warning C4244: 'argumento': conversión de 'double' a 'uint'; posible pérdida de datos
-c:\users\robix\archivos admin\universidad\4ºa\tpv2\practica1\holasdl\blocksmap.cpp(88): warning C4244: 'inicializando': conversión de 'double' a 'int'; posible pérdida de datos
-c:\users\robix\archivos admin\universidad\4ºa\tpv2\practica1\holasdl\blocksmap.cpp(92): warning C4244: 'argumento': conversión de 'double' a 'uint'; posible pérdida de datos
-c:\users\robix\archivos admin\universidad\4ºa\tpv2\practica1\holasdl\blocksmap.cpp(93): warning C4244: 'inicializando': conversión de 'double' a 'int'; posible pérdida de datos
-c:\users\robix\archivos admin\universidad\4ºa\tpv2\practica1\holasdl\blocksmap.cpp(97): warning C4244: 'argumento': conversión de 'double' a 'uint'; posible pérdida de datos
-c:\users\robix\archivos admin\universidad\4ºa\tpv2\practica1\holasdl\blocksmap.cpp(98): warning C4244: 'inicializando': conversión de 'double' a 'int'; posible pérdida de datos
-c:\users\robix\archivos admin\universidad\4ºa\tpv2\practica1\holasdl\blocksmap.cpp(102): warning C4244: 'argumento': conversión de 'double' a 'uint'; posible pérdida de datos
-c:\users\robix\archivos admin\universidad\4ºa\tpv2\practica1\holasdl\blocksmap.cpp(103): warning C4244: 'inicializando': conversión de 'double' a 'int'; posible pérdida de datos
-c:\users\robix\archivos admin\universidad\4ºa\tpv2\practica1\holasdl\blocksmap.cpp(107): warning C4244: 'argumento': conversión de 'double' a 'uint'; posible pérdida de datos
-c:\users\robix\archivos admin\universidad\4ºa\tpv2\practica1\holasdl\blocksmap.cpp(108): warning C4244: 'inicializando': conversión de 'double' a 'int'; posible pérdida de datos
-c:\users\robix\archivos admin\universidad\4ºa\tpv2\practica1\holasdl\blocksmap.cpp(112): warning C4244: 'argumento': conversión de 'double' a 'uint'; posible pérdida de datos
-c:\users\robix\archivos admin\universidad\4ºa\tpv2\practica1\holasdl\blocksmap.cpp(113): warning C4244: 'inicializando': conversión de 'double' a 'int'; posible pérdida de datos
-c:\users\robix\archivos admin\universidad\4ºa\tpv2\practica1\holasdl\blocksmap.cpp(126): warning C4018: '<': no coinciden signed/unsigned
-c:\users\robix\archivos admin\universidad\4ºa\tpv2\practica1\holasdl\blocksmap.cpp(129): warning C4018: '<': no coinciden signed/unsigned
-  Game.cpp
-c:\users\robix\archivos admin\universidad\4ºa\tpv2\practica1\holasdl\game.cpp(21): warning C4244: 'argumento': conversión de 'double' a 'uint'; posible pérdida de datos
-  main.cpp
-c:\program files (x86)\windows kits\10\include\10.0.17134.0\ucrt\crtdbg.h(303): warning C4005: '_malloca': redefinición de macro
-  c:\program files (x86)\windows kits\10\include\10.0.17134.0\ucrt\malloc.h(122): note: vea la definición anterior de '_malloca'
-c:\users\robix\archivos admin\universidad\4ºa\tpv2\practica1\holasdl\main.cpp(94): warning C4018: '<': no coinciden signed/unsigned
-c:\users\robix\archivos admin\universidad\4ºa\tpv2\practica1\holasdl\main.cpp(98): warning C4018: '<': no coinciden signed/unsigned
-c:\users\robix\archivos admin\universidad\4ºa\tpv2\practica1\holasdl\main.cpp(22): warning C4101: 'textW': variable local sin referencia
-c:\users\robix\archivos admin\universidad\4ºa\tpv2\practica1\holasdl\main.cpp(24): warning C4101: 'textFrameH': variable local sin referencia
-c:\users\robix\archivos admin\universidad\4ºa\tpv2\practica1\holasdl\main.cpp(22): warning C4101: 'textH': variable local sin referencia
-c:\users\robix\archivos admin\universidad\4ºa\tpv2\practica1\holasdl\main.cpp(23): warning C4101: 'textFrameW': variable local sin referencia
-  Generando código...
-c:\users\robix\archivos admin\universidad\4ºa\tpv2\practica1\holasdl\blocksmap.cpp(205): warning C4715: 'BlocksMap::blockAt': no todas las rutas de acceso de control devuelven un valor
-  HolaSDL.vcxproj -> C:\Users\Robix\ARCHIVOS ADMIN\UNIVERSIDAD\4ºA\TPV2\Practica1\bin\HolaSDLDebug.exe
+c:\users\gl552\desktop\programacion 2º\practicas\tpv2\practica1\holasdl\ball.cpp(4): warning C4244: '=': conversión de 'double' a 'int'; posible pérdida de datos
+c:\users\gl552\desktop\programacion 2º\practicas\tpv2\practica1\holasdl\ball.cpp(5): warning C4244: '=': conversión de 'double' a 'int'; posible pérdida de datos
+c:\users\gl552\desktop\programacion 2º\practicas\tpv2\practica1\holasdl\ball.cpp(36): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+c:\users\gl552\desktop\programacion 2º\practicas\tpv2\practica1\holasdl\ball.cpp(43): warning C4244: '+=': conversión de 'double' a 'int'; posible pérdida de datos
+c:\users\gl552\desktop\programacion 2º\practicas\tpv2\practica1\holasdl\ball.cpp(44): warning C4244: '+=': conversión de 'double' a 'int'; posible pérdida de datos
+  HolaSDL.vcxproj -> C:\Users\GL552\Desktop\Programacion 2º\practicas\TPV2\Practica1\bin\HolaSDLDebug.exe

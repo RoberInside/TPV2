@@ -8,12 +8,11 @@ Paddle::Paddle()
 Paddle::Paddle(uint w, uint h, uint x, uint y, Texture* t) :
 	w(w), h(h), x(x), y(y), texture(t) 
 {
+	vect = Vector2D(x, y);
+	destRect.x = vect.getX();
+	destRect.y = vect.getY();
 	destRect.h = h; 
-	destRect.w = w; 
-	destRect.x = x * w; 
-	destRect.y = h * y; 
-	vect.setX(0); 
-	vect.setY(0);
+	destRect.w = w;
 }
 
 Paddle::~Paddle()
@@ -27,11 +26,15 @@ void Paddle::Render() const
 
 void Paddle::Update()
 {
-	if (time < SDL_GetTicks())
-	{
-		time += 10;
-		destRect.x += velx * dirX;
+	vect = vect + (dir * vel);
+	if (vect.getX() > 780) {
+		vect = Vector2D(680,vect.getY());
 	}
+	else if (vect.getX() < 20) {
+		vect = Vector2D(20, vect.getY());
+	}
+	destRect.x = vect.getX();
+
 }
 
 void Paddle::handleEvents(SDL_Event& event)
@@ -40,22 +43,22 @@ void Paddle::handleEvents(SDL_Event& event)
 	{
 		if (event.key.keysym.sym == SDLK_a)
 		{
-			velx = -5;
+			dir.setX(1);
 		}
 		else if (event.key.keysym.sym == SDLK_d)
 		{
-			velx = 5;
+			dir.setX(1);
 		}
 	}
 	else if (event.type == SDL_KEYUP )
 	{
 		if (event.key.keysym.sym == SDLK_a)
 		{
-			velx = 0;
+			dir.setX(0);
 		}
 		else if (event.key.keysym.sym == SDLK_d)
 		{
-			velx = 0;
+			dir.setX(0);
 		}
 	}
 }

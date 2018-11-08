@@ -19,7 +19,7 @@ Game::Game()
 	muro[1] = new Wall(25, WIN_HEIGHT,WIN_WIDTH-25,0,textures[1]);
 	muro[2] = new Wall(WIN_WIDTH, 25,0,0,textures[2]);
 	paddle = new Paddle(100,25,3.5,20,textures[3]);
-	ball = new Ball(this,25,25,15,19,textures[4], 1, 1);
+	ball = new Ball(this,25,25,15,19,textures[4]);
 
 	blockmap = new BlocksMap("..//Data//Levels//level01.ark", textures[5], (WIN_HEIGHT / 2) - 25 , WIN_WIDTH - 50);
 	
@@ -79,53 +79,27 @@ void Game::update()
 	
 }
 
-/*void Game::initMap(string level)
+bool Game::Collides(const SDL_Rect rect, const Vector2D& vel, Vector2D& collVector)
 {
-	ifstream map;
-	map.open(level);
-	uint rows, cols;
-	if (!map.is_open()) cout << "No se enceuntra el fichero" << endl;
-	else {
-		map >> rows >> cols;
-		char buffer;
-		blocks = new BlocksMap(this, rows, cols);
-		for (int i = 0; i < rows; i++) 
-		{
-
-			for (int j = 0; j < cols; j++) 
-			{
-				map >> buffer;
-
-				if (buffer == '0') {
-					blocks->setAt(new Block(argumentos constructora))
-				}
-				else if (buffer == '1') {
-					
-				}
-				else if (buffer == '2') {
-					
-				}
-				else if (buffer == '3') {
-					
-
-				}
-				else if (buffer == '4') { 
-					
-				}
-				else if (buffer == '5') {
-					
-
-				}
-			}
-		}
+	bool hit = false; 
+	Block* block = nullptr;
+	block = blockmap->collides(rect, vel, collVector); 
+	if (block != nullptr) {
+		hit = true;
+		blockmap->DelBlock(block); 
+		if (blockmap->numBlocks() == 0) { end = true; }
 	}
-}*/
- 
+	ball->colisionmuros();
+	ball->collisionpadle(paddle->returnPos());
+	return hit;
+}
+
 void Game::handleEvents()
 {
 	SDL_Event event;
 	while (SDL_PollEvent(&event) && !exit) {
 		if (event.type == SDL_QUIT) exit = true;
 		paddle->handleEvents(event);
+		ball->handleEvents(event);
 	}
 }

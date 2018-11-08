@@ -11,7 +11,7 @@ Wall::Wall(uint w, uint h, uint x, uint y, Texture* t) :
 	destRect.h = h; 
 	destRect.w = w; 
 	destRect.x = x; 
-	destRect.y = h * y; 
+	destRect.y = y; 
 	vect.setX(0); 
 	vect.setY(0);
 }
