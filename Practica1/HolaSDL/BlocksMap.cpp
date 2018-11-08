@@ -35,6 +35,8 @@ BlocksMap::~BlocksMap()
 			delete[] blocks[i];
 			blocks[i] = nullptr;
 		}
+		delete blocks;
+		blocks = nullptr;
 	}
 	blocks = nullptr;
 	game = nullptr;

@@ -13,10 +13,11 @@ const uint NUM_TEXTURES = 6;
 
 
 const uint tamBola = 30, AnchoPala = 100, AltoPala = 25, AnchoMuro = 20;
-const uint pos_h_bola = ((WIN_WIDTH / 2) - (tamBola / 2));
-const uint pos_w_bola = (WIN_HEIGHT - 87);
-const uint pos_h_pala = ((WIN_WIDTH / 2) - (AnchoPala / 2));
-const uint pos_w_pala = (WIN_HEIGHT - 60);
+const uint h_bola = ((WIN_WIDTH / 2) - (tamBola / 2));
+const uint w_bola = (WIN_HEIGHT - 87);
+const uint h_padle = ((WIN_WIDTH / 2) - (AnchoPala / 2));
+const uint w_padle = (WIN_HEIGHT - 60);
+const uint FRAME_RATE = 20;
 
 using namespace std;
 

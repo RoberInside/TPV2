@@ -6,7 +6,7 @@ Paddle::Paddle()
 {
 }
 Paddle::Paddle(uint w, uint h, uint x, uint y, Texture* t) :
-	w(w), h(h), x(x), y(y), texture(t) 
+	w(w), h(h), x(x), y(y), texture(t), vect (Vector2D(x, y))
 {
 	vect = Vector2D(x, y);
 	destRect.x = vect.getX();
@@ -27,7 +27,7 @@ void Paddle::Render() const
 void Paddle::Update()
 {
 	vect = vect + (dir * vel);
-	if (vect.getX() > 780) {
+	if (vect.getX() > 680) {
 		vect = Vector2D(680,vect.getY());
 	}
 	else if (vect.getX() < 20) {
@@ -43,7 +43,7 @@ void Paddle::handleEvents(SDL_Event& event)
 	{
 		if (event.key.keysym.sym == SDLK_a)
 		{
-			dir.setX(1);
+			dir.setX(-1);
 		}
 		else if (event.key.keysym.sym == SDLK_d)
 		{

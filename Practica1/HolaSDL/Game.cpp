@@ -13,11 +13,11 @@ Game::Game()
 	for (uint i = 0; i < NUM_TEXTURES; i++) {
 		textures[i] = new Texture(renderer, alltex[i].nombre, alltex[i].row, alltex[i].col);
 	} 
-	muro[0] = new Wall(25, WIN_HEIGHT,0,0,textures[1]);
-	muro[1] = new Wall(25, WIN_HEIGHT,WIN_WIDTH-25,0,textures[1]);
-	muro[2] = new Wall(WIN_WIDTH, 25,0,0,textures[2]);
-	paddle = new Paddle(100,25,3.5,20,textures[3]);
-	ball = new Ball(this,25,25,15,19,textures[4]);
+	muro[0] = new Wall(AnchoMuro, WIN_HEIGHT,0,0,textures[1]);
+	muro[1] = new Wall(AnchoMuro, WIN_HEIGHT,WIN_WIDTH-AnchoMuro,0,textures[1]);
+	muro[2] = new Wall(WIN_WIDTH, AnchoMuro,0,0,textures[2]);
+	paddle = new Paddle(AnchoPala,AltoPala, h_padle, w_padle,textures[3]);
+	ball = new Ball(this,tamBola,tamBola, h_bola, w_bola,textures[4]);
 
 	blockmap = new BlocksMap("..//Data//Levels//level01.ark", textures[5],this , 0,0);
 	
@@ -50,15 +50,22 @@ void Game::run()
 	}
 }
 
+void Game::update()
+{
+	uint startTime = SDL_GetTicks();
+	uint frameTime = SDL_GetTicks() - startTime; // Tiempo de la iteración
+	if (frameTime < FRAME_RATE)
+		SDL_Delay(FRAME_RATE - frameTime);
+	paddle->Update();
+	ball->update();
+	//end = (!ball->() || blockMaps->numblock() == 0);
+	end = blockmap->numBlocks() == 0;
+}
+
+
 void Game::render() const
 {
 	SDL_RenderClear(renderer);
-
-	//textures[0]->render(fond);
-	//dog->Render();
-	//helicopter->Render();
-
-	//textures[0]->render(fond);
 	
 	for (int i = 0; i < 3; i++)
 	{
@@ -68,13 +75,6 @@ void Game::render() const
 	ball->render();
 	blockmap->Render();
 	SDL_RenderPresent(renderer);
-}
-
-void Game::update()
-{
-	paddle->Update();	
-	ball->update();
-	
 }
 
 bool Game::Collides(const SDL_Rect rect, const Vector2D& vel, Vector2D& collVector)
