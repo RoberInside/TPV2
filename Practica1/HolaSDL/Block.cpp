@@ -6,15 +6,11 @@ Block::Block(uint w, uint h, uint x, uint y,int c , Texture* t) :
 	w(w), h(h), x(x), y(y), texture(t),posBlocks(Vector2D(x,y)){
 	destRect.h = h; 
 	destRect.w = w;
-	destRect.x = posBlocks.getX()*w +20; destRect.y = posBlocks.getY()*h+20;
+	destRect.x = posBlocks.getX()*w +20; 
+	destRect.y = posBlocks.getY()*h+20;
 	if (c <= 2) { raw = 0, col = c; }
 	else { raw = 1, col = c % 3; }
 }
-/*Block::Block(uint w, uint h, const Vector2D &pos, Texture* t, uint row, uint col) :
-	w(w), h(h), x(x), y(y), texture(t), raw(row), col(col) {
-	destRect.h = h; destRect.w = w; destRect.x = x; destRect.y = y; vect.setX(0); vect.setY(0);
-}*/
-
 Block::~Block()
 {
 	texture = nullptr;

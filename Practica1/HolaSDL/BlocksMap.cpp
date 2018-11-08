@@ -22,9 +22,9 @@ BlocksMap::BlocksMap(string level, Texture* t, Game* g, uint w, uint h):w(w),h(h
 BlocksMap::~BlocksMap()
 {
 	if (blocks != nullptr) {
-		for (size_t i = 0; i < row; i++)
+		for (int i = 0; i < row; i++)
 		{
-			for (size_t j = 0; j < col; j++)
+			for (int j = 0; j < col; j++)
 			{
 				if (blocks[i][j] != nullptr)
 				{
@@ -35,8 +35,6 @@ BlocksMap::~BlocksMap()
 			delete[] blocks[i];
 			blocks[i] = nullptr;
 		}
-		delete blocks;
-		blocks = nullptr;
 	}
 	blocks = nullptr;
 	game = nullptr;
@@ -51,16 +49,13 @@ void BlocksMap::initMap(string level)
 {
 	ifstream map;
 	map.open(level);
-	//uint rows=0, cols=0;
 	if (!map.is_open()) cout << "No se enceuntra el fichero" << endl;
 	else {
 		map >> row >> col;
-		char buffer;
-		int w , h;
+		int buffer;
 		w = ((800 - (20 * 2)) / col); h = ((600 - 200) / row);
-		//blocks = new BlocksMap(this, rows, cols);
 		blocks = new Block**[row];
-		for (int i = 0; i < row; i++) //por cada fila de la matriz se hace una columna
+		for (int i = 0; i < row; i++) 
 		{
 			blocks[i] = new Block*[col];
 		}
@@ -71,7 +66,6 @@ void BlocksMap::initMap(string level)
 				blocks[i][j] = nullptr;
 			}
 		}
-
 		for (int i = 0; i < row; i++)
 		{
 
@@ -79,13 +73,13 @@ void BlocksMap::initMap(string level)
 			{
 				map >> buffer;
 
-				if (buffer == '0') {
+				if (buffer == 0) {
 					blocks[i][j] = nullptr;
 				}
 
 				else
 				{
-					blocks[i][j] = new Block(w,h,j,i,buffer-1,texture);
+					blocks[i][j] = new Block(w,h,j,i,Color(buffer-1),texture);
 					numblock++;
 				}
 			}

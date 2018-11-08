@@ -3,6 +3,9 @@
 #include "Texture.h"
 #include "Vector2D.h"
 
+
+enum Color { azul = 1, verde = 2, rojo = 3, amarillo = 4, negro = 5, morado = 6 };
+
 class Block
 {
 private:

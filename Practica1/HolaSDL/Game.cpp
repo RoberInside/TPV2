@@ -34,8 +34,7 @@ Game::~Game()
 	delete paddle;
 	for (uint i = 0; i < 3; i++)delete muro[i];
 	delete ball;
-	//blockmap->~BlocksMap();
-	//delete blockmap;
+	delete blockmap;
 	SDL_DestroyRenderer(renderer);
 	SDL_DestroyWindow(window);
 	SDL_Quit();
