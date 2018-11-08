@@ -65,17 +65,15 @@ void Ball::handleEvents(SDL_Event& event)
 
 void Ball::colisionmuros()
 {
-	if (vect.getX()>780)
-	{
-		dirX_ = -dirX_;
+	if (vect.getX() > 760 && vel.getX() > 0) {
+		setVel(-vel.getX(), vel.getY());
 	}
-	else if(vect.getX() <25)
-	{
-		dirX_ = -dirX_;
+	else if (vect.getX() < 20 && vel.getX() < 0) {
+		setVel(-vel.getX(), vel.getY());
 	}
-	if (vect.getY()<20)
+	else if (vect.getY() < 20 && vel.getY() < 0)
 	{
-		dirY_ = -dirY_;
+		setVel(vel.getX(), -vel.getY());
 	}
 }
 
