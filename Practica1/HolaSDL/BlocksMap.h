@@ -1,14 +1,16 @@
 #ifndef BLOCKSMAP_H_
 #define BLOCKSMAP_H_
+
 #include "Texture.h"
 #include "Vector2D.h"
 #include "Block.h"
-#include "Texture.h"
 #include <fstream>
+//#include "ArkanoidObject.h"
 
 class Game;
 
 class BlocksMap
+	
 {
 private:
 	Block*** blocks;
@@ -23,6 +25,9 @@ public:
 	~BlocksMap();
 
 	//void setAt(Block b, uint row, uint col);
+
+	
+
 	int numBlocks() { return numblock; };
 	void initMap(string level);
 	void Render() const;

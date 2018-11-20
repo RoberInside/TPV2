@@ -6,6 +6,8 @@
 #include "Ball.h"
 #include "Block.h"
 #include "BlocksMap.h"
+#include <list>
+#include "ArkanoidObject.h"
 
 const uint WIN_WIDTH = 800;
 const uint WIN_HEIGHT = 600;
@@ -54,7 +56,9 @@ public:
 	void update();
 	bool Collides(const SDL_Rect rect, const Vector2D& vel, Vector2D& collVector);
 
-
+	
+	list <ArkanoidObject*> arkObj;
+	
 };
 #endif // !GAME_H_
 

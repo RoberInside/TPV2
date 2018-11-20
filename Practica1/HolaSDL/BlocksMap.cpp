@@ -2,7 +2,9 @@
 #include "Game.h"
 
 
-BlocksMap::BlocksMap(string level, Texture* t, Game* g, uint w, uint h):w(w),h(h)
+BlocksMap::BlocksMap(string level, Texture* t, Game* g, uint w, uint h) :
+	//ArkanoidObject(t, h, w, row, col),
+	w(w), h(h)
 {
 	game = g;
 	texture = t;
