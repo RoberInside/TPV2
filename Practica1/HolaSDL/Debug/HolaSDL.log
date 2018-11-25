@@ -1,15 +1,57 @@
-﻿  BlocksMap.cpp
-c:\users\robix\archivos admin\universidad\4ºa\tpv2\practica1\holasdl\block.h(32): warning C4244: 'return': conversión de 'double' a 'uint'; posible pérdida de datos
-c:\users\robix\archivos admin\universidad\4ºa\tpv2\practica1\holasdl\block.h(33): warning C4244: 'return': conversión de 'double' a 'uint'; posible pérdida de datos
-c:\users\robix\archivos admin\universidad\4ºa\tpv2\practica1\holasdl\blocksmap.cpp(27): warning C4018: '<': no coinciden signed/unsigned
-c:\users\robix\archivos admin\universidad\4ºa\tpv2\practica1\holasdl\blocksmap.cpp(29): warning C4018: '<': no coinciden signed/unsigned
-c:\users\robix\archivos admin\universidad\4ºa\tpv2\practica1\holasdl\blocksmap.cpp(62): warning C4018: '<': no coinciden signed/unsigned
-c:\users\robix\archivos admin\universidad\4ºa\tpv2\practica1\holasdl\blocksmap.cpp(66): warning C4018: '<': no coinciden signed/unsigned
-c:\users\robix\archivos admin\universidad\4ºa\tpv2\practica1\holasdl\blocksmap.cpp(68): warning C4018: '<': no coinciden signed/unsigned
-c:\users\robix\archivos admin\universidad\4ºa\tpv2\practica1\holasdl\blocksmap.cpp(73): warning C4018: '<': no coinciden signed/unsigned
-c:\users\robix\archivos admin\universidad\4ºa\tpv2\practica1\holasdl\blocksmap.cpp(76): warning C4018: '<': no coinciden signed/unsigned
-c:\users\robix\archivos admin\universidad\4ºa\tpv2\practica1\holasdl\blocksmap.cpp(97): warning C4018: '<': no coinciden signed/unsigned
-c:\users\robix\archivos admin\universidad\4ºa\tpv2\practica1\holasdl\blocksmap.cpp(100): warning C4018: '<': no coinciden signed/unsigned
-c:\users\robix\archivos admin\universidad\4ºa\tpv2\practica1\holasdl\blocksmap.cpp(173): warning C4244: 'inicializando': conversión de 'double' a 'uint'; posible pérdida de datos
-c:\users\robix\archivos admin\universidad\4ºa\tpv2\practica1\holasdl\blocksmap.cpp(174): warning C4244: 'inicializando': conversión de 'double' a 'uint'; posible pérdida de datos
-  HolaSDL.vcxproj -> C:\Users\Robix\ARCHIVOS ADMIN\UNIVERSIDAD\4ºA\TPV2\Practica1\bin\HolaSDLDebug.exe
+﻿  ArkanoidObject.cpp
+c:\users\gl552\desktop\programacion 2º\practicas\tpv2\practica1\holasdl\block.h(32): warning C4244: 'return': conversión de 'double' a 'uint'; posible pérdida de datos
+c:\users\gl552\desktop\programacion 2º\practicas\tpv2\practica1\holasdl\block.h(33): warning C4244: 'return': conversión de 'double' a 'uint'; posible pérdida de datos
+c:\users\gl552\desktop\programacion 2º\practicas\tpv2\practica1\holasdl\game.h(60): error C2065: 'ArkanoidObject': identificador no declarado
+c:\users\gl552\desktop\programacion 2º\practicas\tpv2\practica1\holasdl\game.h(60): error C2059: error de sintaxis: '>'
+c:\users\gl552\desktop\programacion 2º\practicas\tpv2\practica1\holasdl\game.h(60): error C2976: 'std::list': no hay suficientes argumentos de plantilla
+  c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.15.26726\include\list(739): note: vea la declaración de 'std::list'
+c:\users\gl552\desktop\programacion 2º\practicas\tpv2\practica1\holasdl\arkanoidobject.cpp(9): warning C4244: '=': conversión de 'double' a 'int'; posible pérdida de datos
+c:\users\gl552\desktop\programacion 2º\practicas\tpv2\practica1\holasdl\arkanoidobject.cpp(10): warning C4244: '=': conversión de 'double' a 'int'; posible pérdida de datos
+  Ball.cpp
+c:\users\gl552\desktop\programacion 2º\practicas\tpv2\practica1\holasdl\block.h(32): warning C4244: 'return': conversión de 'double' a 'uint'; posible pérdida de datos
+c:\users\gl552\desktop\programacion 2º\practicas\tpv2\practica1\holasdl\block.h(33): warning C4244: 'return': conversión de 'double' a 'uint'; posible pérdida de datos
+c:\users\gl552\desktop\programacion 2º\practicas\tpv2\practica1\holasdl\ball.cpp(12): warning C4244: '=': conversión de 'double' a 'int'; posible pérdida de datos
+c:\users\gl552\desktop\programacion 2º\practicas\tpv2\practica1\holasdl\ball.cpp(13): warning C4244: '=': conversión de 'double' a 'int'; posible pérdida de datos
+c:\users\gl552\desktop\programacion 2º\practicas\tpv2\practica1\holasdl\ball.cpp(37): warning C4244: '=': conversión de 'double' a 'int'; posible pérdida de datos
+  Block.cpp
+c:\users\gl552\desktop\programacion 2º\practicas\tpv2\practica1\holasdl\block.h(32): warning C4244: 'return': conversión de 'double' a 'uint'; posible pérdida de datos
+c:\users\gl552\desktop\programacion 2º\practicas\tpv2\practica1\holasdl\block.h(33): warning C4244: 'return': conversión de 'double' a 'uint'; posible pérdida de datos
+c:\users\gl552\desktop\programacion 2º\practicas\tpv2\practica1\holasdl\block.cpp(9): warning C4244: '=': conversión de 'double' a 'int'; posible pérdida de datos
+c:\users\gl552\desktop\programacion 2º\practicas\tpv2\practica1\holasdl\block.cpp(10): warning C4244: '=': conversión de 'double' a 'int'; posible pérdida de datos
+  BlocksMap.cpp
+c:\users\gl552\desktop\programacion 2º\practicas\tpv2\practica1\holasdl\block.h(32): warning C4244: 'return': conversión de 'double' a 'uint'; posible pérdida de datos
+c:\users\gl552\desktop\programacion 2º\practicas\tpv2\practica1\holasdl\block.h(33): warning C4244: 'return': conversión de 'double' a 'uint'; posible pérdida de datos
+c:\users\gl552\desktop\programacion 2º\practicas\tpv2\practica1\holasdl\blocksmap.cpp(27): warning C4018: '<': no coinciden signed/unsigned
+c:\users\gl552\desktop\programacion 2º\practicas\tpv2\practica1\holasdl\blocksmap.cpp(29): warning C4018: '<': no coinciden signed/unsigned
+c:\users\gl552\desktop\programacion 2º\practicas\tpv2\practica1\holasdl\blocksmap.cpp(62): warning C4018: '<': no coinciden signed/unsigned
+c:\users\gl552\desktop\programacion 2º\practicas\tpv2\practica1\holasdl\blocksmap.cpp(66): warning C4018: '<': no coinciden signed/unsigned
+c:\users\gl552\desktop\programacion 2º\practicas\tpv2\practica1\holasdl\blocksmap.cpp(68): warning C4018: '<': no coinciden signed/unsigned
+c:\users\gl552\desktop\programacion 2º\practicas\tpv2\practica1\holasdl\blocksmap.cpp(73): warning C4018: '<': no coinciden signed/unsigned
+c:\users\gl552\desktop\programacion 2º\practicas\tpv2\practica1\holasdl\blocksmap.cpp(76): warning C4018: '<': no coinciden signed/unsigned
+c:\users\gl552\desktop\programacion 2º\practicas\tpv2\practica1\holasdl\blocksmap.cpp(97): warning C4018: '<': no coinciden signed/unsigned
+c:\users\gl552\desktop\programacion 2º\practicas\tpv2\practica1\holasdl\blocksmap.cpp(100): warning C4018: '<': no coinciden signed/unsigned
+c:\users\gl552\desktop\programacion 2º\practicas\tpv2\practica1\holasdl\blocksmap.cpp(173): warning C4244: 'inicializando': conversión de 'double' a 'uint'; posible pérdida de datos
+c:\users\gl552\desktop\programacion 2º\practicas\tpv2\practica1\holasdl\blocksmap.cpp(174): warning C4244: 'inicializando': conversión de 'double' a 'uint'; posible pérdida de datos
+  Game.cpp
+c:\users\gl552\desktop\programacion 2º\practicas\tpv2\practica1\holasdl\block.h(32): warning C4244: 'return': conversión de 'double' a 'uint'; posible pérdida de datos
+c:\users\gl552\desktop\programacion 2º\practicas\tpv2\practica1\holasdl\block.h(33): warning C4244: 'return': conversión de 'double' a 'uint'; posible pérdida de datos
+  main.cpp
+c:\program files (x86)\windows kits\10\include\10.0.17134.0\ucrt\crtdbg.h(303): warning C4005: '_malloca': redefinición de macro
+  c:\program files (x86)\windows kits\10\include\10.0.17134.0\ucrt\malloc.h(122): note: vea la definición anterior de '_malloca'
+c:\users\gl552\desktop\programacion 2º\practicas\tpv2\practica1\holasdl\block.h(32): warning C4244: 'return': conversión de 'double' a 'uint'; posible pérdida de datos
+c:\users\gl552\desktop\programacion 2º\practicas\tpv2\practica1\holasdl\block.h(33): warning C4244: 'return': conversión de 'double' a 'uint'; posible pérdida de datos
+  MovingObject.cpp
+c:\users\gl552\desktop\programacion 2º\practicas\tpv2\practica1\holasdl\block.h(32): warning C4244: 'return': conversión de 'double' a 'uint'; posible pérdida de datos
+c:\users\gl552\desktop\programacion 2º\practicas\tpv2\practica1\holasdl\block.h(33): warning C4244: 'return': conversión de 'double' a 'uint'; posible pérdida de datos
+c:\users\gl552\desktop\programacion 2º\practicas\tpv2\practica1\holasdl\game.h(60): error C2065: 'ArkanoidObject': identificador no declarado
+c:\users\gl552\desktop\programacion 2º\practicas\tpv2\practica1\holasdl\game.h(60): error C2059: error de sintaxis: '>'
+c:\users\gl552\desktop\programacion 2º\practicas\tpv2\practica1\holasdl\game.h(60): error C2976: 'std::list': no hay suficientes argumentos de plantilla
+  c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.15.26726\include\list(739): note: vea la declaración de 'std::list'
+  Paddle.cpp
+c:\users\gl552\desktop\programacion 2º\practicas\tpv2\practica1\holasdl\paddle.cpp(12): warning C4244: '=': conversión de 'double' a 'int'; posible pérdida de datos
+c:\users\gl552\desktop\programacion 2º\practicas\tpv2\practica1\holasdl\paddle.cpp(13): warning C4244: '=': conversión de 'double' a 'int'; posible pérdida de datos
+c:\users\gl552\desktop\programacion 2º\practicas\tpv2\practica1\holasdl\paddle.cpp(36): warning C4244: '=': conversión de 'double' a 'int'; posible pérdida de datos
+  Texture.cpp
+  Vector2D.cpp
+  Wall.cpp
+  Generando código...
