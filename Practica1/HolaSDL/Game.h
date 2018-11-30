@@ -8,6 +8,7 @@
 #include "BlocksMap.h"
 #include <list>
 #include "ArkanoidObject.h"
+#include "GameObject.h"
 
 const uint WIN_WIDTH = 800;
 const uint WIN_HEIGHT = 600;
@@ -57,7 +58,7 @@ public:
 	bool Collides(const SDL_Rect rect, const Vector2D& vel, Vector2D& collVector);
 
 	
-	list <ArkanoidObject*> arkObj;
+//	list <ArkanoidObject*> arkObj;
 	
 };
 #endif // !GAME_H_

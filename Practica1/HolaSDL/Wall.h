@@ -2,25 +2,26 @@
 #define WALL_H_
 #include "Texture.h"
 #include "Vector2D.h"
+#include "ArkanoidObject.h"
 
-class Wall
+class Wall: public ArkanoidObject
 {
 private:
-	uint w = 0; // width
+	/*uint w = 0; // width
 	uint h = 0; // height
 	uint x = 0; uint y = 0; // Posición de esquina superior izqda
 	int dirX = 0; int dirY = 0; // Dirección de movimiento
 	Texture* texture = nullptr;
 	SDL_Rect destRect;
 	Vector2D vect;
-	int cols = 0;
+	int cols = 0;*/
 
 public:
 	Wall();
-	Wall(uint w, uint h, uint x, uint y, Texture* t);
+	Wall(uint w, uint h, uint x, uint y, Texture* t) : ArkanoidObject(t, h, w, x, y) {}
 	~Wall();
-
-	void Render() const;
+	virtual void Update() {};
+	virtual void handleEvents() {};
 };
 #endif // !WALL_H_
 
