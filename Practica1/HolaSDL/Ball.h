@@ -9,14 +9,8 @@ class Game;
 class Ball : public MovingObject
 {
 private:
-	//uint w = 0; // width
-	//uint h = 0; // height
-	//uint x = 0; uint y = 0; // Posición de esquina superior izqda
-	//int dirX_ = 1; int dirY_ = 1;// Dirección de movimiento
+
 	int velx = 0; int vely = 0;
-	//Texture* texture = nullptr;
-	//Vector2D vel,dir,vect;
-	//SDL_Rect destRect;
 	int time = 0;
 	bool inmov = false;
 	Game* game = nullptr;
