@@ -6,7 +6,7 @@ class GameObject
 public:
 	GameObject() {};
 	virtual ~GameObject() {};
-
+	
 	virtual void Render() const = 0;
 	virtual void Update() = 0;
 	virtual void handleEvents() = 0;

@@ -2,14 +2,7 @@
 #include "Game.h"
 
 
-BlocksMap::BlocksMap(string level, Texture* t, Game* g, uint w, uint h) :
-	//ArkanoidObject(t, h, w, row, col),
-	w(w), h(h)
-{
-	game = g;
-	texture = t;
-	initMap(level);
-}
+
 /*BlocksMap::BlocksMap(Game* game, uint rows, uint cols)
 {
 	blocks = new Block*[rows];
@@ -92,20 +85,7 @@ void BlocksMap::initMap(string level)
 	map.close();
 }
 
-void BlocksMap::Render() const
-{
-	for (int i = 0; i < row; i++)
-	{
 
-		for (int j = 0; j < col; j++)
-		{
-			if (blocks[i][j] != nullptr)
-			{
-				blocks[i][j]->Render();
-			}
-		}
-	}
-}
 
 Block * BlocksMap::collides(const SDL_Rect& ballRect, const Vector2D& ballVel, Vector2D& collVector)
 {

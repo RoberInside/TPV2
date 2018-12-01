@@ -1,46 +1,48 @@
 ﻿  Ball.cpp
-d:\tpv\practica 2\tpv2\practica1\holasdl\arkanoidobject.h(19): warning C4244: 'inicializando': conversión de 'double' a 'uint'; posible pérdida de datos
-d:\tpv\practica 2\tpv2\practica1\holasdl\arkanoidobject.h(24): warning C4244: 'inicializando': conversión de 'double' a 'uint'; posible pérdida de datos
-d:\tpv\practica 2\tpv2\practica1\holasdl\arkanoidobject.h(31): warning C4244: '=': conversión de 'double' a 'int'; posible pérdida de datos
-d:\tpv\practica 2\tpv2\practica1\holasdl\arkanoidobject.h(32): warning C4244: '=': conversión de 'double' a 'int'; posible pérdida de datos
+d:\tpv\practica 2\tpv2\practica1\holasdl\arkanoidobject.h(18): warning C4244: 'inicializando': conversión de 'double' a 'uint'; posible pérdida de datos
+d:\tpv\practica 2\tpv2\practica1\holasdl\arkanoidobject.h(23): warning C4244: 'inicializando': conversión de 'double' a 'uint'; posible pérdida de datos
+d:\tpv\practica 2\tpv2\practica1\holasdl\arkanoidobject.h(30): warning C4244: 'inicializando': conversión de 'double' a 'uint'; posible pérdida de datos
 d:\tpv\practica 2\tpv2\practica1\holasdl\block.h(34): warning C4244: 'return': conversión de 'double' a 'uint'; posible pérdida de datos
 d:\tpv\practica 2\tpv2\practica1\holasdl\block.h(35): warning C4244: 'return': conversión de 'double' a 'uint'; posible pérdida de datos
+d:\tpv\practica 2\tpv2\practica1\holasdl\blocksmap.h(39): warning C4018: '<': no coinciden signed/unsigned
+d:\tpv\practica 2\tpv2\practica1\holasdl\blocksmap.h(42): warning C4018: '<': no coinciden signed/unsigned
 d:\tpv\practica 2\tpv2\practica1\holasdl\ball.cpp(12): warning C4244: '=': conversión de 'double' a 'int'; posible pérdida de datos
 d:\tpv\practica 2\tpv2\practica1\holasdl\ball.cpp(13): warning C4244: '=': conversión de 'double' a 'int'; posible pérdida de datos
 d:\tpv\practica 2\tpv2\practica1\holasdl\ball.cpp(37): warning C4244: '=': conversión de 'double' a 'int'; posible pérdida de datos
   BlocksMap.cpp
-d:\tpv\practica 2\tpv2\practica1\holasdl\arkanoidobject.h(19): warning C4244: 'inicializando': conversión de 'double' a 'uint'; posible pérdida de datos
-d:\tpv\practica 2\tpv2\practica1\holasdl\arkanoidobject.h(24): warning C4244: 'inicializando': conversión de 'double' a 'uint'; posible pérdida de datos
-d:\tpv\practica 2\tpv2\practica1\holasdl\arkanoidobject.h(31): warning C4244: '=': conversión de 'double' a 'int'; posible pérdida de datos
-d:\tpv\practica 2\tpv2\practica1\holasdl\arkanoidobject.h(32): warning C4244: '=': conversión de 'double' a 'int'; posible pérdida de datos
+d:\tpv\practica 2\tpv2\practica1\holasdl\arkanoidobject.h(18): warning C4244: 'inicializando': conversión de 'double' a 'uint'; posible pérdida de datos
+d:\tpv\practica 2\tpv2\practica1\holasdl\arkanoidobject.h(23): warning C4244: 'inicializando': conversión de 'double' a 'uint'; posible pérdida de datos
+d:\tpv\practica 2\tpv2\practica1\holasdl\arkanoidobject.h(30): warning C4244: 'inicializando': conversión de 'double' a 'uint'; posible pérdida de datos
 d:\tpv\practica 2\tpv2\practica1\holasdl\block.h(34): warning C4244: 'return': conversión de 'double' a 'uint'; posible pérdida de datos
 d:\tpv\practica 2\tpv2\practica1\holasdl\block.h(35): warning C4244: 'return': conversión de 'double' a 'uint'; posible pérdida de datos
-d:\tpv\practica 2\tpv2\practica1\holasdl\blocksmap.cpp(27): warning C4018: '<': no coinciden signed/unsigned
-d:\tpv\practica 2\tpv2\practica1\holasdl\blocksmap.cpp(29): warning C4018: '<': no coinciden signed/unsigned
-d:\tpv\practica 2\tpv2\practica1\holasdl\blocksmap.cpp(62): warning C4018: '<': no coinciden signed/unsigned
+d:\tpv\practica 2\tpv2\practica1\holasdl\blocksmap.h(39): warning C4018: '<': no coinciden signed/unsigned
+d:\tpv\practica 2\tpv2\practica1\holasdl\blocksmap.h(42): warning C4018: '<': no coinciden signed/unsigned
+d:\tpv\practica 2\tpv2\practica1\holasdl\blocksmap.cpp(20): warning C4018: '<': no coinciden signed/unsigned
+d:\tpv\practica 2\tpv2\practica1\holasdl\blocksmap.cpp(22): warning C4018: '<': no coinciden signed/unsigned
+d:\tpv\practica 2\tpv2\practica1\holasdl\blocksmap.cpp(55): warning C4018: '<': no coinciden signed/unsigned
+d:\tpv\practica 2\tpv2\practica1\holasdl\blocksmap.cpp(59): warning C4018: '<': no coinciden signed/unsigned
+d:\tpv\practica 2\tpv2\practica1\holasdl\blocksmap.cpp(61): warning C4018: '<': no coinciden signed/unsigned
 d:\tpv\practica 2\tpv2\practica1\holasdl\blocksmap.cpp(66): warning C4018: '<': no coinciden signed/unsigned
-d:\tpv\practica 2\tpv2\practica1\holasdl\blocksmap.cpp(68): warning C4018: '<': no coinciden signed/unsigned
-d:\tpv\practica 2\tpv2\practica1\holasdl\blocksmap.cpp(73): warning C4018: '<': no coinciden signed/unsigned
-d:\tpv\practica 2\tpv2\practica1\holasdl\blocksmap.cpp(76): warning C4018: '<': no coinciden signed/unsigned
-d:\tpv\practica 2\tpv2\practica1\holasdl\blocksmap.cpp(97): warning C4018: '<': no coinciden signed/unsigned
-d:\tpv\practica 2\tpv2\practica1\holasdl\blocksmap.cpp(100): warning C4018: '<': no coinciden signed/unsigned
-d:\tpv\practica 2\tpv2\practica1\holasdl\blocksmap.cpp(173): warning C4244: 'inicializando': conversión de 'double' a 'uint'; posible pérdida de datos
-d:\tpv\practica 2\tpv2\practica1\holasdl\blocksmap.cpp(174): warning C4244: 'inicializando': conversión de 'double' a 'uint'; posible pérdida de datos
+d:\tpv\practica 2\tpv2\practica1\holasdl\blocksmap.cpp(69): warning C4018: '<': no coinciden signed/unsigned
+d:\tpv\practica 2\tpv2\practica1\holasdl\blocksmap.cpp(153): warning C4244: 'inicializando': conversión de 'double' a 'uint'; posible pérdida de datos
+d:\tpv\practica 2\tpv2\practica1\holasdl\blocksmap.cpp(154): warning C4244: 'inicializando': conversión de 'double' a 'uint'; posible pérdida de datos
   Game.cpp
-d:\tpv\practica 2\tpv2\practica1\holasdl\arkanoidobject.h(19): warning C4244: 'inicializando': conversión de 'double' a 'uint'; posible pérdida de datos
-d:\tpv\practica 2\tpv2\practica1\holasdl\arkanoidobject.h(24): warning C4244: 'inicializando': conversión de 'double' a 'uint'; posible pérdida de datos
-d:\tpv\practica 2\tpv2\practica1\holasdl\arkanoidobject.h(31): warning C4244: '=': conversión de 'double' a 'int'; posible pérdida de datos
-d:\tpv\practica 2\tpv2\practica1\holasdl\arkanoidobject.h(32): warning C4244: '=': conversión de 'double' a 'int'; posible pérdida de datos
+d:\tpv\practica 2\tpv2\practica1\holasdl\arkanoidobject.h(18): warning C4244: 'inicializando': conversión de 'double' a 'uint'; posible pérdida de datos
+d:\tpv\practica 2\tpv2\practica1\holasdl\arkanoidobject.h(23): warning C4244: 'inicializando': conversión de 'double' a 'uint'; posible pérdida de datos
+d:\tpv\practica 2\tpv2\practica1\holasdl\arkanoidobject.h(30): warning C4244: 'inicializando': conversión de 'double' a 'uint'; posible pérdida de datos
 d:\tpv\practica 2\tpv2\practica1\holasdl\block.h(34): warning C4244: 'return': conversión de 'double' a 'uint'; posible pérdida de datos
 d:\tpv\practica 2\tpv2\practica1\holasdl\block.h(35): warning C4244: 'return': conversión de 'double' a 'uint'; posible pérdida de datos
+d:\tpv\practica 2\tpv2\practica1\holasdl\blocksmap.h(39): warning C4018: '<': no coinciden signed/unsigned
+d:\tpv\practica 2\tpv2\practica1\holasdl\blocksmap.h(42): warning C4018: '<': no coinciden signed/unsigned
   main.cpp
 d:\windows kits\10\include\10.0.17763.0\ucrt\crtdbg.h(303): warning C4005: '_malloca': redefinición de macro
   d:\windows kits\10\include\10.0.17763.0\ucrt\malloc.h(122): note: vea la definición anterior de '_malloca'
-d:\tpv\practica 2\tpv2\practica1\holasdl\arkanoidobject.h(19): warning C4244: 'inicializando': conversión de 'double' a 'uint'; posible pérdida de datos
-d:\tpv\practica 2\tpv2\practica1\holasdl\arkanoidobject.h(24): warning C4244: 'inicializando': conversión de 'double' a 'uint'; posible pérdida de datos
-d:\tpv\practica 2\tpv2\practica1\holasdl\arkanoidobject.h(31): warning C4244: '=': conversión de 'double' a 'int'; posible pérdida de datos
-d:\tpv\practica 2\tpv2\practica1\holasdl\arkanoidobject.h(32): warning C4244: '=': conversión de 'double' a 'int'; posible pérdida de datos
+d:\tpv\practica 2\tpv2\practica1\holasdl\arkanoidobject.h(18): warning C4244: 'inicializando': conversión de 'double' a 'uint'; posible pérdida de datos
+d:\tpv\practica 2\tpv2\practica1\holasdl\arkanoidobject.h(23): warning C4244: 'inicializando': conversión de 'double' a 'uint'; posible pérdida de datos
+d:\tpv\practica 2\tpv2\practica1\holasdl\arkanoidobject.h(30): warning C4244: 'inicializando': conversión de 'double' a 'uint'; posible pérdida de datos
 d:\tpv\practica 2\tpv2\practica1\holasdl\block.h(34): warning C4244: 'return': conversión de 'double' a 'uint'; posible pérdida de datos
 d:\tpv\practica 2\tpv2\practica1\holasdl\block.h(35): warning C4244: 'return': conversión de 'double' a 'uint'; posible pérdida de datos
+d:\tpv\practica 2\tpv2\practica1\holasdl\blocksmap.h(39): warning C4018: '<': no coinciden signed/unsigned
+d:\tpv\practica 2\tpv2\practica1\holasdl\blocksmap.h(42): warning C4018: '<': no coinciden signed/unsigned
   Generando código...
   HolaSDL.vcxproj -> D:\TPV\Practica 2\TPV2\Practica1\bin\HolaSDLDebug.exe

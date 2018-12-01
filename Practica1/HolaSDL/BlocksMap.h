@@ -5,11 +5,11 @@
 #include "Vector2D.h"
 #include "Block.h"
 #include <fstream>
-//#include "ArkanoidObject.h"
+#include "ArkanoidObject.h"
 
 class Game;
 
-class BlocksMap
+class BlocksMap : public ArkanoidObject
 	
 {
 private:
@@ -18,22 +18,37 @@ private:
 	Texture* texture;
 	//Vector2D vect;
 	int numblock;
-	uint w = 0, h = 0;
+	//uint w = 0, h = 0;
 	Game* game;
 public:
-	BlocksMap(string level, Texture* t, Game* g,uint w, uint h);
+	BlocksMap(string level, Texture* t, Game* g,uint w, uint h): ArkanoidObject(t,h,w) {
+		game = g;
+		texture = t;
+		initMap(level);
+	}
 	~BlocksMap();
 
 	//void setAt(Block b, uint row, uint col);
-
-	
-
 	int numBlocks() { return numblock; };
 	void initMap(string level);
-	void Render() const;
 	void DeleteBlock(Block* block);
 	Block* collides(const SDL_Rect& ballRect, const Vector2D& ballVel, Vector2D& collVector);
 	Block* blockAt(const Vector2D& p);
+
+	virtual void Render() const
+	{
+		for (int i = 0; i < row; i++)
+		{
+
+			for (int j = 0; j < col; j++)
+			{
+				if (blocks[i][j] != nullptr)
+				{
+					blocks[i][j]->Render();
+				}
+			}
+		}
+	};
 };
 #endif // !BLOCKSMAP_H_
 
