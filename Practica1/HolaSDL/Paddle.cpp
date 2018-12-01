@@ -2,10 +2,10 @@
 
 
 
-Paddle::Paddle()
+/*Paddle::Paddle()
 {
-}
-Paddle::Paddle(uint w, uint h, uint x, uint y, Texture* t) :
+}*/
+/*Paddle::Paddle(uint w, uint h, uint x, uint y, Texture* t) :
 	w(w), h(h), x(x), y(y), texture(t), vect (Vector2D(x, y))
 {
 	vect = Vector2D(x, y);
@@ -13,16 +13,16 @@ Paddle::Paddle(uint w, uint h, uint x, uint y, Texture* t) :
 	destRect.y = vect.getY();
 	destRect.h = h; 
 	destRect.w = w;
-}
+}*/
 
 Paddle::~Paddle()
 {
 }
 
-void Paddle::Render() const
+/*void Paddle::Render() const
 {
 	texture->render(destRect);
-}
+}*/
 
 void Paddle::Update()
 {

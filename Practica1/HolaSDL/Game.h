@@ -7,6 +7,7 @@
 #include "Block.h"
 #include "BlocksMap.h"
 #include <list>
+#include "MovingObject.h"
 #include "ArkanoidObject.h"
 #include "GameObject.h"
 
