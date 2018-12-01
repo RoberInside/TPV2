@@ -65,7 +65,7 @@ void Game::update()
 	if (frameTime < FRAME_RATE)
 		SDL_Delay(FRAME_RATE - frameTime);
 	paddle->Update();
-	ball->update();
+	ball->Update();
 	exit = (!ball->inGame() || blockmap->numBlocks() == 0);
 	end = blockmap->numBlocks() == 0;
 }
@@ -80,7 +80,7 @@ void Game::render() const
 		muro[i]->Render();
 	}
 	paddle->Render();
-	ball->render();
+	ball->Render();
 	blockmap->Render();
 	SDL_RenderPresent(renderer);
 }

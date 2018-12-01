@@ -3,7 +3,7 @@
 
 const double VELX = 0.0;
 const double VELY = 0.0;
-Ball::Ball(Game* g,uint w, uint h, uint x, uint y, Texture* t) :
+/*Ball::Ball(Game* g,uint w, uint h, uint x, uint y, Texture* t) :
 	w(w), h(h), x(x), y(y), texture(t)
 {
 	vect = Vector2D(x, y);
@@ -12,29 +12,29 @@ Ball::Ball(Game* g,uint w, uint h, uint x, uint y, Texture* t) :
 	destRect.x = vect.getX();
 	destRect.y = vect.getY();
 	game = g;
-}
+}*/
 
 Ball::~Ball()
 {
 }
 
-void Ball::render() const
+/*void Ball::render() const
 {
 	texture->render(destRect);
-}
-void Ball::update()
+}*/
+void Ball::Update()
 {
 	Vector2D aux = vect;
 	vect = vect + vel;
 
 	Vector2D col;
 
-	if (game->Collides(destRect, vel, col)) {
+	if (game->Collides(getRect(), vel, col)) {
 		vel = vel - col * (vel * col * 2);
 		vect = aux + vel;
 	}
 
-	destRect.x = vect.getX(); destRect.y = vect.getY();
+	//destRect.x = vect.getX(); destRect.y = vect.getY();
 }
  
 void Ball::handleEvents(SDL_Event& event)
