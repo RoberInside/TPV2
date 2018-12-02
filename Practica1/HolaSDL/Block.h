@@ -33,6 +33,8 @@ public:
 	inline uint getW() { return w; }
 	inline uint getCol() { return vect.getX(); }
 	inline uint getRow() { return vect.getY(); }
+	int getPosX() { return x; }
+	int getPosY() { return y; }
 };
 #endif // !BLOCK_H_
 

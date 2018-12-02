@@ -6,6 +6,7 @@
 #include "Ball.h"
 #include "Block.h"
 #include "BlocksMap.h"
+#include "Reward.h"
 #include <list>
 #include "MovingObject.h"
 #include "ArkanoidObject.h"
@@ -13,7 +14,7 @@
 
 const uint WIN_WIDTH = 800;
 const uint WIN_HEIGHT = 600;
-const uint NUM_TEXTURES = 6;
+const uint NUM_TEXTURES = 7;
 
 
 const uint tamBola = 30, AnchoPala = 100, AltoPala = 25, AnchoMuro = 20;
@@ -21,6 +22,8 @@ const uint h_bola = ((WIN_WIDTH / 2) - (tamBola / 2));
 const uint w_bola = (WIN_HEIGHT - 87);
 const uint h_padle = ((WIN_WIDTH / 2) - (AnchoPala / 2));
 const uint w_padle = (WIN_HEIGHT - 60);
+const uint w_reward = 50;
+const uint h_reward = 30;
 const uint FRAME_RATE = 20;
 
 using namespace std;
@@ -38,6 +41,7 @@ private:
 	BlocksMap* blockmap = nullptr;
 	bool end = false;
 	bool exit = false;
+	Reward * reward = nullptr;
 	Texture* textures[NUM_TEXTURES]{nullptr,nullptr,nullptr,nullptr,nullptr,nullptr };
 	struct texture_type
 	{
@@ -45,7 +49,7 @@ private:
 		uint col, row;
 	};
 	texture_type alltex[NUM_TEXTURES] = { "..\\images\\fondo.png",1,1,"..\\images\\side.png",1,1,"..\\images\\topside.png",1,1,
-	 "..\\images\\paddle.png",1,1,"..\\images\\ball.png",1,1,"..\\images\\bricks.png",3,2};
+	 "..\\images\\paddle.png",1,1,"..\\images\\ball.png",1,1,"..\\images\\bricks.png",3,2,"..\\images\\bricks.png",8,10};
 
 	SDL_Rect fond;
 public:

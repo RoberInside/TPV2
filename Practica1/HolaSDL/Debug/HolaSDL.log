@@ -41,5 +41,9 @@ d:\tpv\practica 2\tpv2\practica1\holasdl\block.h(34): warning C4244: 'return': c
 d:\tpv\practica 2\tpv2\practica1\holasdl\block.h(35): warning C4244: 'return': conversión de 'double' a 'uint'; posible pérdida de datos
 d:\tpv\practica 2\tpv2\practica1\holasdl\blocksmap.h(40): warning C4018: '<': no coinciden signed/unsigned
 d:\tpv\practica 2\tpv2\practica1\holasdl\blocksmap.h(43): warning C4018: '<': no coinciden signed/unsigned
+  Reward.cpp
+d:\tpv\practica 2\tpv2\practica1\holasdl\arkanoidobject.h(18): warning C4244: 'inicializando': conversión de 'double' a 'uint'; posible pérdida de datos
+d:\tpv\practica 2\tpv2\practica1\holasdl\arkanoidobject.h(23): warning C4244: 'inicializando': conversión de 'double' a 'uint'; posible pérdida de datos
+d:\tpv\practica 2\tpv2\practica1\holasdl\arkanoidobject.h(30): warning C4244: 'inicializando': conversión de 'double' a 'uint'; posible pérdida de datos
   Generando código...
   HolaSDL.vcxproj -> D:\TPV\Practica 2\TPV2\Practica1\bin\HolaSDLDebug.exe
