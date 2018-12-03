@@ -34,7 +34,7 @@ private:
 	SDL_Window* window = nullptr;
 	SDL_Renderer* renderer = nullptr;
 	// uint winWidth, winHeight; // También podrían estar aquí
-
+	int lifes = 3;
 	Wall* muro[3]{ nullptr,nullptr,nullptr};
 	Paddle* paddle = nullptr;
 	Ball* ball = nullptr;
@@ -43,6 +43,7 @@ private:
 	bool exit = false;
 	Reward * reward = nullptr;
 	Texture* textures[NUM_TEXTURES]{nullptr,nullptr,nullptr,nullptr,nullptr,nullptr };
+	int level = 1;
 	struct texture_type
 	{
 		string nombre;
@@ -61,6 +62,10 @@ public:
 	void handleEvents();
 	void update();
 	bool Collides(const SDL_Rect rect, const Vector2D& vel, Vector2D& collVector);
+	void RewardFuction(Reward * r)
+	{
+
+	}
 
 	
 //	list <ArkanoidObject*> arkObj;

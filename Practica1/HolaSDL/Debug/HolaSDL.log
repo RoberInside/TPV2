@@ -31,6 +31,25 @@ d:\tpv\practica 2\tpv2\practica1\holasdl\block.h(34): warning C4244: 'return': c
 d:\tpv\practica 2\tpv2\practica1\holasdl\block.h(35): warning C4244: 'return': conversión de 'double' a 'uint'; posible pérdida de datos
 d:\tpv\practica 2\tpv2\practica1\holasdl\blocksmap.h(40): warning C4018: '<': no coinciden signed/unsigned
 d:\tpv\practica 2\tpv2\practica1\holasdl\blocksmap.h(43): warning C4018: '<': no coinciden signed/unsigned
+d:\tpv\practica 2\tpv2\practica1\holasdl\game.cpp(128): error C2084: la función 'void Game::RewardFuction(Reward *)' ya tiene un cuerpo
+  d:\tpv\practica 2\tpv2\practica1\holasdl\game.h(64): note: vea la definición anterior de 'RewardFuction'
+d:\tpv\practica 2\tpv2\practica1\holasdl\game.cpp(129): error C2059: error de sintaxis: ')'
+d:\tpv\practica 2\tpv2\practica1\holasdl\game.cpp(130): error C2143: error de sintaxis: falta ';' delante de '{'
+d:\tpv\practica 2\tpv2\practica1\holasdl\game.cpp(133): error C2059: error de sintaxis: ')'
+d:\tpv\practica 2\tpv2\practica1\holasdl\game.cpp(134): error C2143: error de sintaxis: falta ';' delante de '{'
+d:\tpv\practica 2\tpv2\practica1\holasdl\game.cpp(137): error C2059: error de sintaxis: ')'
+d:\tpv\practica 2\tpv2\practica1\holasdl\game.cpp(138): error C2143: error de sintaxis: falta ';' delante de '{'
+d:\tpv\practica 2\tpv2\practica1\holasdl\game.cpp(141): error C2059: error de sintaxis: ')'
+d:\tpv\practica 2\tpv2\practica1\holasdl\game.cpp(142): error C2143: error de sintaxis: falta ';' delante de '{'
+  Paddle.cpp
+d:\tpv\practica 2\tpv2\practica1\holasdl\arkanoidobject.h(18): warning C4244: 'inicializando': conversión de 'double' a 'uint'; posible pérdida de datos
+d:\tpv\practica 2\tpv2\practica1\holasdl\arkanoidobject.h(23): warning C4244: 'inicializando': conversión de 'double' a 'uint'; posible pérdida de datos
+d:\tpv\practica 2\tpv2\practica1\holasdl\arkanoidobject.h(30): warning C4244: 'inicializando': conversión de 'double' a 'uint'; posible pérdida de datos
+d:\tpv\practica 2\tpv2\practica1\holasdl\paddle.cpp(36): warning C4244: '=': conversión de 'double' a 'int'; posible pérdida de datos
+  Reward.cpp
+d:\tpv\practica 2\tpv2\practica1\holasdl\arkanoidobject.h(18): warning C4244: 'inicializando': conversión de 'double' a 'uint'; posible pérdida de datos
+d:\tpv\practica 2\tpv2\practica1\holasdl\arkanoidobject.h(23): warning C4244: 'inicializando': conversión de 'double' a 'uint'; posible pérdida de datos
+d:\tpv\practica 2\tpv2\practica1\holasdl\arkanoidobject.h(30): warning C4244: 'inicializando': conversión de 'double' a 'uint'; posible pérdida de datos
   main.cpp
 d:\windows kits\10\include\10.0.17763.0\ucrt\crtdbg.h(303): warning C4005: '_malloca': redefinición de macro
   d:\windows kits\10\include\10.0.17763.0\ucrt\malloc.h(122): note: vea la definición anterior de '_malloca'
@@ -41,9 +60,4 @@ d:\tpv\practica 2\tpv2\practica1\holasdl\block.h(34): warning C4244: 'return': c
 d:\tpv\practica 2\tpv2\practica1\holasdl\block.h(35): warning C4244: 'return': conversión de 'double' a 'uint'; posible pérdida de datos
 d:\tpv\practica 2\tpv2\practica1\holasdl\blocksmap.h(40): warning C4018: '<': no coinciden signed/unsigned
 d:\tpv\practica 2\tpv2\practica1\holasdl\blocksmap.h(43): warning C4018: '<': no coinciden signed/unsigned
-  Reward.cpp
-d:\tpv\practica 2\tpv2\practica1\holasdl\arkanoidobject.h(18): warning C4244: 'inicializando': conversión de 'double' a 'uint'; posible pérdida de datos
-d:\tpv\practica 2\tpv2\practica1\holasdl\arkanoidobject.h(23): warning C4244: 'inicializando': conversión de 'double' a 'uint'; posible pérdida de datos
-d:\tpv\practica 2\tpv2\practica1\holasdl\arkanoidobject.h(30): warning C4244: 'inicializando': conversión de 'double' a 'uint'; posible pérdida de datos
   Generando código...
-  HolaSDL.vcxproj -> D:\TPV\Practica 2\TPV2\Practica1\bin\HolaSDLDebug.exe

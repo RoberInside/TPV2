@@ -35,7 +35,7 @@ public:
 
 
 	virtual bool loadFormFile() { return true; }
-	virtual bool saveToFile() { return true; }
+	virtual void saveToFile() { }
 	virtual SDL_Rect getRect() const { return  SDL_Rect{ int(vect.getX()), int(vect.getY()),int(w),int(h) }; }
 
 	virtual void Render() const { texture_ArkObject->render(getRect()); }

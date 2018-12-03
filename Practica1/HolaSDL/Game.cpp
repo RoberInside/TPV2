@@ -124,3 +124,22 @@ void Game::handleEvents()
 		ball->handleEvents(event);
 	}
 }
+void Game::RewardFuction(Reward* r)
+{
+	if (r->getTipeReward()==0)
+	{
+		level++;
+	}
+	if (r->getTipeReward()==1)
+	{
+		lifes++;
+	}
+	if (r->getTipeReward()==2)
+	{
+		paddle->setWithd(paddle->getWithd()*1.5);
+	}
+	if (r->getTipeReward()==3)
+	{
+		paddle->setWithd(paddle->getWithd()/1.5);
+	}
+}
