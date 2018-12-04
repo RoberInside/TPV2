@@ -36,6 +36,8 @@ public:
 	inline uint getRow() { return vect.getY();}
 	int getPosX() { return x; }
 	int getPosY() { return y; }
+	int getX() { return vect.getX()*w + 20; }
+	int getY() { return vect.getY()*h + 20; }
 };
 #endif // !BLOCK_H_
 

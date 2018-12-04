@@ -96,7 +96,7 @@ Block * BlocksMap::collides(const SDL_Rect& ballRect, const Vector2D& ballVel, V
 	Block* b = nullptr;
 	if (ballVel.getX() < 0 && ballVel.getY() < 0) {
 		if ((b = blockAt(p0))) {
-			if ((b->getRow() + b->getH() - p0.getY()) <= (b->getCol() + b->getW() - p0.getX()))
+			if ((b->getY() + b->getH() - p0.getY()) <= (b->getX() + b->getW() - p0.getX()))
 				collVector = { 0,1 }; // Borde inferior mas cerca de p0
 			else
 				collVector = { 1,0 }; // Borde dcho mas cerca de p0
@@ -109,7 +109,7 @@ Block * BlocksMap::collides(const SDL_Rect& ballRect, const Vector2D& ballVel, V
 	}
 	else if (ballVel.getX() >= 0 && ballVel.getY() < 0) {
 		if ((b = blockAt(p1))) {
-			if (((b->getRow() + b->getH() - p1.getY()) <= (p1.getX() - b->getCol())) || ballVel.getX() == 0)
+			if (((b->getY() + b->getH() - p1.getY()) <= (p1.getX() - b->getX())) || ballVel.getX() == 0)
 				collVector = { 0,1 }; // Borde inferior mas cerca de p1
 			else
 				collVector = { -1,0 }; // Borde izqdo mas cerca de p1
@@ -121,7 +121,7 @@ Block * BlocksMap::collides(const SDL_Rect& ballRect, const Vector2D& ballVel, V
 	}
 	else if (ballVel.getX() > 0 && ballVel.getY() > 0) {
 		if ((b = blockAt(p3))) {
-			if (((p3.getY() - b->getRow()) <= (p3.getX() - b->getCol()))) // || ballVel.getX() == 0)
+			if (((p3.getY() - b->getY()) <= (p3.getX() - b->getX()))) // || ballVel.getX() == 0)
 				collVector = { 0,-1 }; // Borde superior mas cerca de p3
 			else
 				collVector = { -1,0 }; // Borde dcho mas cerca de p3
@@ -133,7 +133,7 @@ Block * BlocksMap::collides(const SDL_Rect& ballRect, const Vector2D& ballVel, V
 	}
 	else if (ballVel.getX() < 0 && ballVel.getY() > 0) {
 		if ((b = blockAt(p2))) {
-			if (((p2.getY() - b->getRow()) <= (b->getCol() + b->getW() - p2.getX()))) // || ballVel.getX() == 0)
+			if (((p2.getY() - b->getY()) <= (b->getX() + b->getW() - p2.getX()))) // || ballVel.getX() == 0)
 				collVector = { 0,-1 }; // Borde superior mas cerca de p2
 			else
 				collVector = { 1,0 }; // Borde dcho mas cerca de p0
