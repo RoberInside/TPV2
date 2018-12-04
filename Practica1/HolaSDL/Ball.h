@@ -14,6 +14,7 @@ private:
 	int time = 0;
 	bool inmov = false;
 	Game* game = nullptr;
+	int x, y;
 
 public:
 	Ball(Game* g, uint w, uint h, uint x, uint y, Texture* t) :MovingObject(t, h, w, x, y) { game = g; };

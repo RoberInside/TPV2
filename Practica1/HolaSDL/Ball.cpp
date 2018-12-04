@@ -110,8 +110,9 @@ void Ball::saveToFile(int num)
 	ofstream file;
 	file.open(to_string(num), ios::app);
 	file << "ball" << endl;
-	file << vect.getX() << ' ' << vect.getY() << endl;
-	file << vel.getX() << ' ' << vel.getY() << endl;
+	file <<int(vect.getX()) << ' ' << int(vect.getY()) << endl;
+	file <<int(vel.getX()) << ' ' << int(vel.getY()) << endl;
+	file << int(dir.getX()) << ' ' << int(dir.getY()) << endl;
 	file.close();
 }
 void Ball::loadFormFile(int num)
@@ -124,12 +125,18 @@ void Ball::loadFormFile(int num)
 	{
 		file >> read;
 	}
-	int x, y;
-	file >> x >> y;
+	file >> x;
+	file >> y;
 	vect.setX(x);
 	vect.setY(y);
-	file >> x >> y;
+	file >> x;
+	file >> y;
 	vel.setX(x);
 	vel.setY(y);
+	file >> x;
+	file >> y;
+	dir.setX(x);
+	dir.setY(y);
+	file.close();
 }
 

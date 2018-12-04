@@ -234,4 +234,5 @@ void BlocksMap::loadFormFile(int num)
 			}
 		}
 	}
+	file.close();
 }

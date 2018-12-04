@@ -81,7 +81,9 @@ void Paddle::loadFormFile(int num)
 		file >> read;
 	}
 	int x, y;
-	file >> x >> y;
+	file >> x;
+	file >> y;
 	vect.setX(x);
 	vect.setY(y);
+	file.close();
 }

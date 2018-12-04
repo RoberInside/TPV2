@@ -1,4 +1,4 @@
-﻿  Game.cpp
+﻿  Ball.cpp
 d:\tpv\practica 2\tpv2\practica1\holasdl\arkanoidobject.h(19): warning C4244: 'inicializando': conversión de 'double' a 'uint'; posible pérdida de datos
 d:\tpv\practica 2\tpv2\practica1\holasdl\arkanoidobject.h(24): warning C4244: 'inicializando': conversión de 'double' a 'uint'; posible pérdida de datos
 d:\tpv\practica 2\tpv2\practica1\holasdl\arkanoidobject.h(31): warning C4244: 'inicializando': conversión de 'double' a 'uint'; posible pérdida de datos
@@ -6,6 +6,4 @@ d:\tpv\practica 2\tpv2\practica1\holasdl\block.h(35): warning C4244: 'return': c
 d:\tpv\practica 2\tpv2\practica1\holasdl\block.h(36): warning C4244: 'return': conversión de 'double' a 'uint'; posible pérdida de datos
 d:\tpv\practica 2\tpv2\practica1\holasdl\blocksmap.h(44): warning C4018: '<': no coinciden signed/unsigned
 d:\tpv\practica 2\tpv2\practica1\holasdl\blocksmap.h(47): warning C4018: '<': no coinciden signed/unsigned
-d:\tpv\practica 2\tpv2\practica1\holasdl\game.cpp(184): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
-d:\tpv\practica 2\tpv2\practica1\holasdl\game.cpp(188): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
   HolaSDL.vcxproj -> D:\TPV\Practica 2\TPV2\Practica1\bin\HolaSDLDebug.exe
