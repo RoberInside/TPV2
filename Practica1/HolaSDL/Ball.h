@@ -22,6 +22,8 @@ public:
 	//virtual void Render() const;
 	virtual void Update();
 	virtual void handleEvents(SDL_Event& event);
+	virtual void loadFormFile(int num);
+	virtual void saveToFile(int num);
 
 	void setVel(double x, double y) { vel = { x,y }; }
 	void colisionmuros();

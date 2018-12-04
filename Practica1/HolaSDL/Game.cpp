@@ -19,8 +19,18 @@ Game::Game()
 	paddle = new Paddle(AnchoPala,AltoPala, h_padle, w_padle,textures[3]);
 	ball = new Ball(this,tamBola,tamBola, h_bola, w_bola,textures[4]);
 
-	blockmap = new BlocksMap("..//Data//Levels//level01.ark", textures[5],this , 0,0);
-	
+	while (!newg && !load)
+	{
+		handleEvents();
+	}
+	blockmap = new BlocksMap("..//Data//Levels//level0" + to_string(level) + ".ark", textures[5], this, 0, 0);
+	if (load) {
+		int num;
+		cin >> num;
+		blockmap->loadFormFile(num);
+		paddle->loadFormFile(num);
+		ball->loadFormFile(num);
+	}
 
 	fond.x = fond.y = 0;
 	fond.w = WIN_WIDTH;
@@ -52,8 +62,8 @@ Game::~Game()
 void Game::run()
 {
 	while (!exit) { 
-		handleEvents();
 		update();
+		handleEvents();
 		render();
 	}
 }
@@ -64,7 +74,7 @@ void Game::update()
 	uint frameTime = SDL_GetTicks() - startTime;
 	if (frameTime < FRAME_RATE)
 		SDL_Delay(FRAME_RATE - frameTime);
-	if (reward != nullptr)
+	/*if (reward != nullptr)
 	{
 		reward->Update();
 		if (reward->getPosY() >= WIN_HEIGHT)
@@ -72,11 +82,16 @@ void Game::update()
 			delete reward;
 			reward = nullptr;
 		}
-	}
+	}*/
 	paddle->Update();
 	ball->Update();
-	exit = (!ball->inGame() || blockmap->numBlocks() == 0);
+	if (!ball->inGame())lifes--;
+	if (blockmap->numBlocks() == 0)level++;
+	if (lifes == 0)exit = true;
 	end = blockmap->numBlocks() == 0;
+	if (level >3) {
+		exit = true;
+	}
 }
 
 
@@ -88,7 +103,7 @@ void Game::render() const
 	{
 		muro[i]->Render();
 	}
-	reward->Render();
+	//reward->Render();
 	paddle->Render();
 	ball->Render();
 	blockmap->Render();
@@ -105,7 +120,7 @@ bool Game::Collides(const SDL_Rect rect, const Vector2D& vel, Vector2D& collVect
 		int rnd = rand() % 5;
 		if (rnd == 4)
 		{
-			reward = new Reward(w_reward, h_reward, block->getPosX(), block->getPosY(), textures[7]);
+			//reward = new Reward(w_reward, h_reward, block->getPosX(), block->getPosY(), textures[7]);
 		}
 		blockmap->DeleteBlock(block); 
 		if (blockmap->numBlocks() == 0) { end = true; }
@@ -119,9 +134,42 @@ void Game::handleEvents()
 {
 	SDL_Event event;
 	while (SDL_PollEvent(&event) && !exit) {
-		if (event.type == SDL_QUIT) exit = true;
-		paddle->handleEvents(event);
-		ball->handleEvents(event);
+		if (event.type == SDL_QUIT) 
+			exit = true;
+		if (!newg && !load)
+		{
+			if (event.type = SDL_MOUSEBUTTONDOWN)
+			{
+				if (event.button.clicks == SDL_BUTTON_LEFT)
+				{
+					SDL_GetMouseState(&mouseX, &mouseY);
+					if (mouseY<400)
+					{
+						newg = true;
+					}
+					else 
+					{
+						load = true;
+					}
+				}
+			}
+		}
+		else
+		{
+			if (event.type == SDL_KEYDOWN)
+			{
+				if (event.key.keysym.sym == SDLK_s)
+				{
+					int num;
+					cin >> num;
+					blockmap->saveToFile(num);
+					paddle->saveToFile(num);
+					ball->saveToFile(num);
+				}
+			}
+			paddle->handleEvents(event);
+			ball->handleEvents(event);
+		}
 	}
 }
 void Game::RewardFuction(Reward* r)

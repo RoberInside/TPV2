@@ -1,6 +1,7 @@
 #ifndef ARKANOIDOBJECT_H_
 #define ARKANOIDOBJECT_H_
 #include "GameObject.h"
+#include <fstream>
 
 class ArkanoidObject : public GameObject
 {
@@ -34,8 +35,8 @@ public:
 	virtual ~ArkanoidObject() {};
 
 
-	virtual bool loadFormFile() { return true; }
-	virtual void saveToFile() { }
+	virtual void loadFormFile(int num) {}
+	virtual void saveToFile(int num) {}
 	virtual SDL_Rect getRect() const { return  SDL_Rect{ int(vect.getX()), int(vect.getY()),int(w),int(h) }; }
 
 	virtual void Render() const { texture_ArkObject->render(getRect()); }

@@ -163,3 +163,75 @@ void BlocksMap::DeleteBlock(Block* block) {
 	blocks[fila_aux][col_aux] = nullptr;
 	numblock--;
 }
+
+void BlocksMap::saveToFile(int num)
+{
+	ofstream file(to_string(num));
+	//file.open(num + ".txt");
+	file << "mapa" << endl;
+	file << row <<' '<< col<< endl;
+	for (int i = 0; i < row; i++)
+	{
+
+		for (int j = 0; j < col; j++)
+		{
+			if (blocks[i][j] != nullptr)
+			{
+				file<<blocks[i][j]->getColor()+1<<' ';
+			}
+			else
+			{
+				file << 0 << ' ';
+			}
+		}
+		file << endl;
+	}
+	file.close();
+}
+void BlocksMap::loadFormFile(int num)
+{
+	ifstream file;
+	file.open(to_string(num));
+	string read="";
+	file >> read;
+	while (read !="mapa")
+	{
+		file >> read;
+	}
+	if (read == "mapa")
+	{
+		file >> row >> col;
+		int buffer;
+		w = ((800 - (20 * 2)) / col); h = ((600 - 200) / row);
+		blocks = new Block**[row];
+		for (int i = 0; i < row; i++)
+		{
+			blocks[i] = new Block*[col];
+		}
+		for (int i = 0; i < row; i++)
+		{
+			for (int j = 0; j < col; j++)
+			{
+				blocks[i][j] = nullptr;
+			}
+		}
+		for (int i = 0; i < row; i++)
+		{
+
+			for (int j = 0; j < col; j++)
+			{
+				file >> buffer;
+
+				if (buffer == 0) {
+					blocks[i][j] = nullptr;
+				}
+
+				else
+				{
+					blocks[i][j] = new Block(w, h, j, i, Color(buffer - 1), texture);
+					numblock++;
+				}
+			}
+		}
+	}
+}

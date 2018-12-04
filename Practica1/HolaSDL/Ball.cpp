@@ -41,7 +41,7 @@ void Ball::handleEvents(SDL_Event& event)
 {
 	if (event.type==SDL_KEYDOWN)
 	{
-		if (event.key.keysym.sym == SDLK_s)
+		if (event.key.keysym.sym == SDLK_l)
 		{
 			while (velx==0)
 			{
@@ -105,6 +105,31 @@ void Ball::calculateVelDir(Vector2D posPadle)
 
 	setVel(X, Y);
 }
-
-
+void Ball::saveToFile(int num)
+{
+	ofstream file;
+	file.open(to_string(num), ios::app);
+	file << "ball" << endl;
+	file << vect.getX() << ' ' << vect.getY() << endl;
+	file << vel.getX() << ' ' << vel.getY() << endl;
+	file.close();
+}
+void Ball::loadFormFile(int num)
+{
+	ifstream file;
+	file.open(to_string(num));
+	string read = "";
+	file >> read;
+	while (read != "ball")
+	{
+		file >> read;
+	}
+	int x, y;
+	file >> x >> y;
+	vect.setX(x);
+	vect.setY(y);
+	file >> x >> y;
+	vel.setX(x);
+	vel.setY(y);
+}
 

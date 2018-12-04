@@ -62,3 +62,26 @@ void Paddle::handleEvents(SDL_Event& event)
 		}
 	}
 }
+void Paddle::saveToFile(int num)
+{
+	ofstream file;
+	file.open(to_string(num),ios::app);
+	file << "paddle" << endl;
+	file << vect.getX() << ' ' << vect.getY() << endl;
+	file.close();
+}
+void Paddle::loadFormFile(int num) 
+{
+	ifstream file;
+	file.open(to_string(num));
+	string read = "";
+	file >> read;
+	while (read != "paddle")
+	{
+		file >> read;
+	}
+	int x, y;
+	file >> x >> y;
+	vect.setX(x);
+	vect.setY(y);
+}

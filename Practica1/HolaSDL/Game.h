@@ -31,6 +31,8 @@ using namespace std;
 class Game
 {
 private:
+	int mouseX, mouseY;
+	bool load = false, newg = false;
 	SDL_Window* window = nullptr;
 	SDL_Renderer* renderer = nullptr;
 	// uint winWidth, winHeight; // También podrían estar aquí
@@ -62,10 +64,7 @@ public:
 	void handleEvents();
 	void update();
 	bool Collides(const SDL_Rect rect, const Vector2D& vel, Vector2D& collVector);
-	void RewardFuction(Reward * r)
-	{
-
-	}
+	void RewardFuction(Reward * r);
 
 	
 //	list <ArkanoidObject*> arkObj;

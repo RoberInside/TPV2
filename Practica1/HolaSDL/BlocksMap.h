@@ -32,6 +32,10 @@ public:
 	int numBlocks() { return numblock; };
 	void initMap(string level);
 	void DeleteBlock(Block* block);
+
+	virtual void loadFormFile(int num);
+	virtual void saveToFile(int num);
+
 	Block* collides(const SDL_Rect& ballRect, const Vector2D& ballVel, Vector2D& collVector);
 	Block* blockAt(const Vector2D& p);
 

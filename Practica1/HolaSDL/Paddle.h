@@ -28,6 +28,8 @@ public:
 	virtual void Update();
 	Vector2D returnPos() { return vect; }
 	virtual void handleEvents(SDL_Event& event);
+	virtual void loadFormFile(int num);
+	virtual void saveToFile(int num);
 	void setWithd(int withd){w = withd;}
 	int getWithd() { return w; }
 };

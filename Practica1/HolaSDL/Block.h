@@ -29,10 +29,11 @@ public:
 	virtual void Render() const { texture_ArkObject->renderFrame(getRect(), raw, col); };
 	virtual SDL_Rect getRect() const { return  SDL_Rect{ int(vect.getX()*w + 20), int(vect.getY()*h + 20),int(w),int(h) }; };
 
+	inline uint getColor() { return color; }
 	inline uint getH() { return h; }
 	inline uint getW() { return w; }
 	inline uint getCol() { return vect.getX(); }
-	inline uint getRow() { return vect.getY(); }
+	inline uint getRow() { return vect.getY();}
 	int getPosX() { return x; }
 	int getPosY() { return y; }
 };
