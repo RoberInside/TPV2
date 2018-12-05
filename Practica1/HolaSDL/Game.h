@@ -52,7 +52,7 @@ private:
 		uint col, row;
 	};
 	texture_type alltex[NUM_TEXTURES] = { "..\\images\\fondo.png",1,1,"..\\images\\side.png",1,1,"..\\images\\topside.png",1,1,
-	 "..\\images\\paddle.png",1,1,"..\\images\\ball.png",1,1,"..\\images\\bricks.png",3,2,"..\\images\\bricks.png",8,10};
+	 "..\\images\\paddle.png",1,1,"..\\images\\ball.png",1,1,"..\\images\\bricks.png",3,2,"..\\images\\rewards.png",8,10};
 
 	SDL_Rect fond;
 public:

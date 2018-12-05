@@ -128,9 +128,9 @@ void Game::render() const
 	for (ArkanoidObject* ar : arkObj_) {
 		ar->Render();
 	}
-	paddle->Render();
+/*	paddle->Render();
 	ball->Render();
-	blockmap->Render();
+	blockmap->Render();*/
 	SDL_RenderPresent(renderer);
 }
 
@@ -144,13 +144,17 @@ bool Game::Collides(const SDL_Rect rect, const Vector2D& vel, Vector2D& collVect
 		int rnd = rand() % 5;
 		if (rnd == 4)
 		{
-			reward = new Reward(w_reward, h_reward, block->getPosX(), block->getPosY(), textures[7]);
+			reward = new Reward(w_reward, h_reward, block->getX(), block->getY(), textures[6]);
 		}
 		blockmap->DeleteBlock(block); 
 		if (blockmap->numBlocks() == 0) { end = true; }
 	}
 	ball->colisionmuros();
 	ball->collisionpadle(paddle->returnPos());
+	if (reward != nullptr)
+	{
+		reward->collisionpadle(paddle->returnPos());
+	}
 	return hit;
 }
 

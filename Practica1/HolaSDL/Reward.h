@@ -12,7 +12,8 @@ private:
 	int tipereward;
 public:
 	Reward(uint w, uint h, uint x, uint y, Texture* t) :MovingObject(t, h, w, x, y) 
-	{ int rnd = rand() % 4;
+	{
+	int rnd = rand() % 4;
 	if (rnd = 0) { raw = 0; col = 0; }
 	else if (rnd = 1) { raw = 1; col = 0; }
 	else if (rnd = 2) { raw = 4; col = 0; }
