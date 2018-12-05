@@ -9,7 +9,7 @@ public:
 	
 	virtual void Render() const = 0;
 	virtual void Update() = 0;
-	virtual void handleEvents() = 0;
+	virtual void handleEvents(SDL_Event& event) = 0;
 };
 #endif // !GAMEOBJECT_H_
 

@@ -67,7 +67,7 @@ public:
 	void RewardFuction(Reward * r);
 
 	
-//	list <ArkanoidObject*> arkObj;
+	list <ArkanoidObject*> arkObj_;
 	
 };
 #endif // !GAME_H_

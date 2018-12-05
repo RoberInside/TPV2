@@ -19,17 +19,29 @@ Game::Game()
 	paddle = new Paddle(AnchoPala,AltoPala, h_padle, w_padle,textures[3]);
 	ball = new Ball(this,tamBola,tamBola, h_bola, w_bola,textures[4]);
 
+	// añadir a la lista
+	arkObj_.push_back(paddle);
+	arkObj_.push_back(ball);
+
 	while (!newg && !load)
 	{
 		handleEvents();
 	}
 	blockmap = new BlocksMap("..//Data//Levels//level0" + to_string(level) + ".ark", textures[5], this, 0, 0);
+	//añadir a la lista
+	arkObj_.push_back(blockmap);
+
 	if (load) {
 		int num;
 		cin >> num;
+		// Por cada objeto ar en la lista arkObj -> load fromFile
+		for (ArkanoidObject* ar : arkObj_) {	
+			ar->loadFormFile(num);
+		}
+		/*
 		blockmap->loadFormFile(num);
 		paddle->loadFormFile(num);
-		ball->loadFormFile(num);
+		ball->loadFormFile(num);*/
 	}
 
 	fond.x = fond.y = 0;
@@ -83,8 +95,11 @@ void Game::update()
 			reward = nullptr;
 		}
 	}
-	paddle->Update();
-	ball->Update();
+	for (ArkanoidObject* ar : arkObj_) {
+		ar->Update();
+	}
+	/*paddle->Update();
+	ball->Update();*/
 	if (!ball->inGame())lifes--;
 	if (blockmap->numBlocks() == 0)level++;
 	if (lifes == 0)exit = true;
@@ -109,6 +124,9 @@ void Game::render() const
 	}
 	if (reward != nullptr) {
 		reward->Render();
+	}
+	for (ArkanoidObject* ar : arkObj_) {
+		ar->Render();
 	}
 	paddle->Render();
 	ball->Render();
@@ -173,8 +191,12 @@ void Game::handleEvents()
 					ball->saveToFile(num);
 				}
 			}
-			paddle->handleEvents(event);
-			ball->handleEvents(event);
+			for (ArkanoidObject* ar : arkObj_) {
+				ar->handleEvents(event);		//si peta algo es probable que se me halla pasado algo de la herencia del handle events hacia 
+				//arriba (gameobject, etc..) 
+			}
+			/*paddle->handleEvents(event);
+			ball->handleEvents(event);*/
 		}
 	}
 }
