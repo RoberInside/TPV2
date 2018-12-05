@@ -74,7 +74,7 @@ void Game::update()
 	uint frameTime = SDL_GetTicks() - startTime;
 	if (frameTime < FRAME_RATE)
 		SDL_Delay(FRAME_RATE - frameTime);
-	/*if (reward != nullptr)
+	if (reward != nullptr)
 	{
 		reward->Update();
 		if (reward->getPosY() >= WIN_HEIGHT)
@@ -82,7 +82,7 @@ void Game::update()
 			delete reward;
 			reward = nullptr;
 		}
-	}*/
+	}
 	paddle->Update();
 	ball->Update();
 	if (!ball->inGame())lifes--;
@@ -107,7 +107,9 @@ void Game::render() const
 	{
 		muro[i]->Render();
 	}
-	//reward->Render();
+	if (reward != nullptr) {
+		reward->Render();
+	}
 	paddle->Render();
 	ball->Render();
 	blockmap->Render();
@@ -124,7 +126,7 @@ bool Game::Collides(const SDL_Rect rect, const Vector2D& vel, Vector2D& collVect
 		int rnd = rand() % 5;
 		if (rnd == 4)
 		{
-			//reward = new Reward(w_reward, h_reward, block->getPosX(), block->getPosY(), textures[7]);
+			reward = new Reward(w_reward, h_reward, block->getPosX(), block->getPosY(), textures[7]);
 		}
 		blockmap->DeleteBlock(block); 
 		if (blockmap->numBlocks() == 0) { end = true; }
