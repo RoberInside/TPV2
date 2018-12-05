@@ -89,6 +89,10 @@ void Game::update()
 	if (blockmap->numBlocks() == 0)level++;
 	if (lifes == 0)exit = true;
 	end = blockmap->numBlocks() == 0;
+	if (end)
+	{
+		blockmap=new BlocksMap("..//Data//Levels//level0" + to_string(level) + ".ark", textures[5], this, 0, 0);
+	}
 	if (level >3) {
 		exit = true;
 	}
