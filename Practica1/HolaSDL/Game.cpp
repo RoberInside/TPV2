@@ -18,7 +18,14 @@ Game::Game()
 	muro[2] = new Wall(WIN_WIDTH, AnchoMuro,0,0,textures[2]);
 	paddle = new Paddle(AnchoPala,AltoPala, h_padle, w_padle,textures[3]);
 	ball = new Ball(this,tamBola,tamBola, h_bola, w_bola,textures[4]);
-
+	bottonload= new Texture(renderer, "..\\images\\load.png",1, 1);
+	bottonplay=new Texture(renderer, "..\\images\\play.png",1 ,1);
+	SDL_Rect destplay,destload;
+	destplay = SDL_Rect{ 0,0,WIN_WIDTH,WIN_HEIGHT / 2 };
+	destload = SDL_Rect{ 0,WIN_HEIGHT / 2 ,WIN_WIDTH,WIN_HEIGHT / 2 };
+	bottonload->render(destload);
+	bottonplay->render(destplay);
+	SDL_RenderPresent(renderer);
 	// añadir a la lista
 	arkObj_.push_back(paddle);
 	arkObj_.push_back(ball);
@@ -27,6 +34,10 @@ Game::Game()
 	{
 		handleEvents();
 	}
+	delete bottonload;
+	delete bottonplay;
+	bottonload = nullptr;
+	bottonplay =nullptr;
 	blockmap = new BlocksMap("..//Data//Levels//level0" + to_string(level) + ".ark", textures[5], this, 0, 0);
 	//añadir a la lista
 	arkObj_.push_back(blockmap);
@@ -100,7 +111,19 @@ void Game::update()
 	}
 	/*paddle->Update();
 	ball->Update();*/
-	if (!ball->inGame())lifes--;
+	if (!ball->inGame())
+	{
+		arkObj_.pop_back();
+		arkObj_.pop_back();
+		arkObj_.pop_back();
+		delete ball;
+		ball = nullptr;
+		ball = new Ball(this, tamBola, tamBola, h_bola, w_bola, textures[4]);
+		arkObj_.push_back(paddle);
+		arkObj_.push_back(ball);
+		arkObj_.push_back(blockmap);
+		lifes--;
+	}
 	if (blockmap->numBlocks() == 0)level++;
 	if (lifes == 0)exit = true;
 	end = blockmap->numBlocks() == 0;
@@ -126,7 +149,9 @@ void Game::render() const
 		reward->Render();
 	}
 	for (ArkanoidObject* ar : arkObj_) {
-		ar->Render();
+		if (ar != nullptr) {
+			ar->Render();
+		}
 	}
 /*	paddle->Render();
 	ball->Render();
@@ -153,7 +178,12 @@ bool Game::Collides(const SDL_Rect rect, const Vector2D& vel, Vector2D& collVect
 	ball->collisionpadle(paddle->returnPos());
 	if (reward != nullptr)
 	{
-		reward->collisionpadle(paddle->returnPos());
+		if (reward->collisionpadle(paddle->returnPos()))
+		{
+			RewardFuction(reward);
+			delete reward;
+			reward = nullptr;
+		}
 	}
 	return hit;
 }
@@ -171,7 +201,7 @@ void Game::handleEvents()
 				if (event.button.clicks == SDL_BUTTON_LEFT)
 				{
 					SDL_GetMouseState(&mouseX, &mouseY);
-					if (mouseY<400)
+					if (mouseY<WIN_HEIGHT/2)
 					{
 						newg = true;
 					}
@@ -209,6 +239,19 @@ void Game::RewardFuction(Reward* r)
 	if (r->getTipeReward()==0)
 	{
 		level++;
+		arkObj_.pop_back();
+		arkObj_.pop_back();
+		arkObj_.pop_back();
+		delete ball;
+		ball = nullptr;
+		ball = new Ball(this, tamBola, tamBola, h_bola, w_bola, textures[4]);
+		delete blockmap;
+		blockmap = nullptr;
+		blockmap = new BlocksMap("..//Data//Levels//level0" + to_string(level) + ".ark", textures[5], this, 0, 0);
+		arkObj_.push_back(paddle);
+		arkObj_.push_back(ball);
+		arkObj_.push_back(blockmap);
+
 	}
 	if (r->getTipeReward()==1)
 	{

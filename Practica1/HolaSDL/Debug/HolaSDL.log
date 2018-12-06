@@ -8,6 +8,6 @@ d:\tpv\practica 2\tpv2\practica1\holasdl\block.h(39): warning C4244: 'return': c
 d:\tpv\practica 2\tpv2\practica1\holasdl\block.h(40): warning C4244: 'return': conversión de 'double' a 'int'; posible pérdida de datos
 d:\tpv\practica 2\tpv2\practica1\holasdl\blocksmap.h(44): warning C4018: '<': no coinciden signed/unsigned
 d:\tpv\practica 2\tpv2\practica1\holasdl\blocksmap.h(47): warning C4018: '<': no coinciden signed/unsigned
-d:\tpv\practica 2\tpv2\practica1\holasdl\game.cpp(219): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
-d:\tpv\practica 2\tpv2\practica1\holasdl\game.cpp(223): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+d:\tpv\practica 2\tpv2\practica1\holasdl\game.cpp(262): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+d:\tpv\practica 2\tpv2\practica1\holasdl\game.cpp(266): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
   HolaSDL.vcxproj -> D:\TPV\Practica 2\TPV2\Practica1\bin\HolaSDLDebug.exe

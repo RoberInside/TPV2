@@ -44,6 +44,8 @@ private:
 	bool end = false;
 	bool exit = false;
 	Reward * reward = nullptr;
+	Texture* bottonplay;
+	Texture* bottonload;
 	Texture* textures[NUM_TEXTURES]{nullptr,nullptr,nullptr,nullptr,nullptr,nullptr };
 	int level = 1;
 	struct texture_type
