@@ -27,8 +27,8 @@ Paddle::~Paddle()
 void Paddle::Update()
 {
 	vect = vect + (dir * vel);
-	if (vect.getX() > 680) {
-		vect = Vector2D(680,vect.getY());
+	if (vect.getX() > 780-getWithd()) {
+		vect = Vector2D(780 - getWithd(),vect.getY());
 	}
 	else if (vect.getX() < 20) {
 		vect = Vector2D(20, vect.getY());
