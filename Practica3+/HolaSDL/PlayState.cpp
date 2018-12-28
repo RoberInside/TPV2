@@ -1,5 +1,14 @@
 #include "PlayState.h"
 
+PlayState::PlayState():GameState()
+{
+	gameOb = GameState::getSceneList();
+}
+
+PlayState::~PlayState()
+{
+}
+
 void PlayState::update()
 {
 	if (!gameOb.empty())
@@ -14,4 +23,8 @@ void PlayState::render()
 	{
 		gameOb.back()->Render();
 	}
+}
+
+void PlayState::handleEvents(SDL_Event & event)
+{
 }

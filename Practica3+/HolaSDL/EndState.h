@@ -1,4 +1,5 @@
-#pragma once
+#ifndef ENDSTATE_H_
+#define ENDSTATE_H_
 #include "GameState.h"
 
 class EndState : public GameState
@@ -11,4 +12,5 @@ public:
 	virtual void render();
 	virtual void handleEvents(SDL_Event& event);
 };
+#endif // !ENDSTATE_H_
 

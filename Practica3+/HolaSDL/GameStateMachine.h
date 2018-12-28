@@ -1,4 +1,5 @@
-#pragma once
+#ifndef GAMESTATEMACHINE_H_
+#define GAMESTATEMACHINE_H_
 #include "GameState.h"
 #include <stack>
 
@@ -12,7 +13,7 @@ public:
 	GameStateMachine();
 	~GameStateMachine();
 
-	void currentState();
+	GameState* currentState();
 	void pushState(GameState* gSt);
 	void changeState(GameState* gSt);
 	void popState();
@@ -20,4 +21,5 @@ public:
 	void update();
 	void render();
 };
+#endif // !GAMESTATEMACHINE_H_
 

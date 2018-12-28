@@ -10,6 +10,11 @@ GameStateMachine::~GameStateMachine()
 {
 }
 
+GameState* GameStateMachine::currentState()
+{
+	return gameSt.top();
+}
+
 void GameStateMachine::pushState(GameState* gSt)
 {
 	gameSt.push(gSt);
@@ -19,7 +24,6 @@ void GameStateMachine::popState()
 {
 	if (!gameSt.empty())
 	{
-		delete gameSt.top();
 		gameSt.pop();
 	}
 }
@@ -27,15 +31,8 @@ void GameStateMachine::changeState(GameState* gSt)
 {
 	if(!gameSt.empty())
 	{
-		if (gameSt == gSt)
-		{
-
-		}
-		else
-		{
-			delete gameSt.top();
-			gameSt.pop();
-		}
+		
+		gameSt.pop();		
 		gameSt.push(gSt);
 	}
 }

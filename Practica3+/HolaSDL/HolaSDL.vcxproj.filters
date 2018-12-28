@@ -48,9 +48,6 @@
     <ClCompile Include="EndState.cpp">
       <Filter>Archivos de código fuente</Filter>
     </ClCompile>
-    <ClCompile Include="GameState.cpp">
-      <Filter>Archivos de código fuente</Filter>
-    </ClCompile>
     <ClCompile Include="GameStateMachine.cpp">
       <Filter>Archivos de código fuente</Filter>
     </ClCompile>
